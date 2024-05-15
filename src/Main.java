@@ -1,9 +1,22 @@
 import java.util.Scanner;
+import java.util.Calendar;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        Calendar calendar = Calendar.getInstance();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+    
+        if (hour<12 && hour>=5){
+            System.out.print("Goodmorning.Happy to see you here :) .\nDo you have an account?\n");
+         }
+        else if(hour<20 && hour>=12){
+            System.out.print("Goodevening.Happy to see you here :) .\nDo you have an account?\n");
+        }
+        else{
+            System.out.print("Goodnight.Happy to see you here :) .\nDon't stay up late!\nDo you have an account?\n");
+        }
         Scanner sc = new Scanner(System.in);
 
         ConnectionDB db = new ConnectionDB();
