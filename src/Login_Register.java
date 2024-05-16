@@ -5,15 +5,21 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Login_Register {
+    public static String gender;
+    public static Float weight;
+    public static Float height;
+    public static Float weight_goal;
+    public static String username;
+    public static String password;
     public static void login(Scanner sc) throws SQLException {
 //        Establish  connection to DB
         ConnectionDB db = new ConnectionDB();
         db.connect();
 //        Get the info
         System.out.println("Enter Username");
-        String username = sc.nextLine();
+        username = sc.nextLine();
         System.out.println("Enter Password");
-        String password = sc.nextLine();
+        password = sc.nextLine();
 
         PreparedStatement user_check;
         user_check = db.connect().prepareStatement("select * from users");
@@ -22,6 +28,10 @@ public class Login_Register {
         while (rs.next()) {
             if (rs.getString("username").equals(username) && rs.getString("password").equals(password)) {
                 System.out.println("Login Successful");
+                gender =rs.getString("gender");
+                 weight =rs.getFloat("weight");
+                 height =rs.getFloat("heigth");
+                 weight_goal =rs.getFloat("goal_w");
             } else {
                 System.out.println("Login Failed\n" +
                         "Incorrect Username or Password");
@@ -35,11 +45,10 @@ public class Login_Register {
 
         //get id from user
         System.out.print("Enter username:\n");
-        String username = sc.nextLine();
+        username = sc.nextLine();
         //get pw from user
         System.out.print("Enter password:\n");
-        String pw = sc.nextLine();
-        String gender;
+        password = sc.nextLine();
         System.out.print("Enter gender: (Male/Female)\n");
         do {
             gender = sc.nextLine();
@@ -49,18 +58,18 @@ public class Login_Register {
         } while (!(gender.equalsIgnoreCase("male")) && !(gender.equals("female")));
 
         System.out.print("Enter weight(kg):");
-        Float weight = sc.nextFloat();
+        weight = sc.nextFloat();
         System.out.print("Enter height(cm):\n");
-        Float height = sc.nextFloat();
+         height = sc.nextFloat();
         System.out.print("Enter your target weight(kg):\n");
-        Float weight_goal = sc.nextFloat();
+        weight_goal = sc.nextFloat();
 
         try{
             PreparedStatement register = db.connect().prepareStatement("INSERT INTO users" +
                     "(username, password, gender, heigth, weight, goal_w, bmi)values" +
                             "(?, ?, ?, ?, ?, ?, ?)");{
                 register.setString(1, username);
-                register.setString(2, pw);
+                register.setString(2, password);
                 register.setString(3, gender);
                 register.setFloat(4, height);
                 register.setFloat(5, weight);
