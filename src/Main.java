@@ -9,13 +9,13 @@ public class Main {
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
     
         if (hour<12 && hour>=5){
-            System.out.print("Goodmorning.Happy to see you here :) .\nDo you have an account?\n");
+            System.out.print("Goodmorning.Happy to see you here :) .\n");
          }
         else if(hour<20 && hour>=12){
-            System.out.print("Goodevening.Happy to see you here :) .\nDo you have an account?\n");
+            System.out.print("Goodevening.Happy to see you here :) .\n");
         }
         else{
-            System.out.print("Goodnight.Happy to see you here :) .\nDon't stay up late!\nDo you have an account?\n");
+            System.out.print("Goodnight.Happy to see you here :) .\nDon't stay up late!\n");
         }
         Scanner sc = new Scanner(System.in);
 
@@ -28,7 +28,11 @@ public class Main {
                           "Exit         =======> 3\n ");
         int choice = sc.nextInt();
         switch(choice){
-            case 1: break;
+            case 1:  try {
+                            Login_Register.login(sc);
+                        } catch (SQLException e) {
+                            throw new RuntimeException(e);
+                        } break;
             case 2: break;
             case 3: break;
         }
