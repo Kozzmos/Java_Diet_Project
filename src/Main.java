@@ -1,3 +1,4 @@
+import java.sql.SQLException;
 import java.util.Scanner;
 import java.util.Calendar;
 
@@ -50,23 +51,33 @@ public class Main {
         ConnectionDB db = new ConnectionDB();
         db.connect();
 
-       System.out.printf("========Welcome========\n" +
+                while(true) {
+                    System.out.printf("========Welcome========\n" +
                         "Login\t\t=======> Login\n" +
                         "Register\t=======> Register\n" +
                         "Exit\t\t=======> Exit\n ");
-                String choice = sc.next();
-                switch(choice.toLowerCase(Locale.ROOT)){
-                    case "login":
-
-                        try {
-                            Login_Register.login(sc);
-                        } catch (SQLException e) {
-                            throw new RuntimeException(e);
-                        }
-                        mainpage();
+                    String choice = sc.next();
+                    switch(choice.toLowerCase(Locale.ROOT)){
+                        case "login":
+    
+                            try {
+                                Login_Register.login(sc);
+                            } catch (SQLException e) {
+                                throw new RuntimeException(e);
+                            }
+                            if(Login_Register.login_check==true) {
+                                mainpage();
+                            }
+                            break;
+                        case "register" : 
+                            Login_Register.register(sc);
+                            System.out.println("Thanks for registering!");
+                            break;
+                        case "exit" : break;
+                    }
+                    if(choice.toLowerCase().equals("exit")){
                         break;
-                    case "register" : break;
-                    case "exit" : break;
+                    }
                 }
 
         sc.close();
