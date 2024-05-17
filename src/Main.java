@@ -14,12 +14,7 @@ public class Main {
 
         switch(choice_main_page.toLowerCase()){
             case "showinfo":
-                String gender=Login_Register.gender;
-                Float weight=Login_Register.weight;
-                Float height=Login_Register.height;
-                Float weight_goal=Login_Register.weight_goal;
-
-                System.out.println("Gender: "+gender+"\n"+"Weight: "+weight+"\n"+"Height: "+height+"\n"+"Weight Goal: "+weight_goal+"\n"+"Body Mass Index: "+(weight/((height/100)*(height/100))));
+                 System.out.println("Gender: "+Login_Register.gender+"\n"+"Weight: "+Login_Register.weight+"\n"+"Height: "+Login_Register.height+"\n"+"Weight Goal: "+Login_Register.weight_goal+"\n"+"Body Mass Index: "+(Login_Register.weight/((Login_Register.height/100)*(Login_Register.height/100))));
                 break;
                 case "mydiet":
 
