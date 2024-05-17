@@ -11,6 +11,7 @@ public class Login_Register {
     public static Float weight_goal;
     public static String username;
     public static String password;
+    public static String pregnancy;
     public static void login(Scanner sc) throws SQLException {
 //        Establish  connection to DB
         ConnectionDB db = new ConnectionDB();
@@ -57,6 +58,14 @@ public class Login_Register {
             }
         } while (!(gender.equalsIgnoreCase("male")) && !(gender.equals("female")));
 
+        if(gender.equalsIgnoreCase("female")) {
+            System.out.print("Are you pregnant? Yes/No");
+            pregnancy = sc.next();
+            if(pregnancy.equalsIgnoreCase("yes")) {
+                System.out.println("Congratulations! :)\nKeep in mind that your BMI may not be accurate and instead of focusing on your weight your priority is a healthy diet.");
+            }
+        }
+        
         System.out.print("Enter weight(kg):");
         weight = sc.nextFloat();
         System.out.print("Enter height(cm):\n");
@@ -66,8 +75,8 @@ public class Login_Register {
 
         try{
             PreparedStatement register = db.connect().prepareStatement("INSERT INTO users" +
-                    "(username, password, gender, heigth, weight, goal_w, bmi)values" +
-                            "(?, ?, ?, ?, ?, ?, ?)");{
+                    "(username, password, gender, heigth, weight, goal_w, bmi, pregnancy)values" +
+                            "(?, ?, ?, ?, ?, ?, ?, ?)");{
                 register.setString(1, username);
                 register.setString(2, password);
                 register.setString(3, gender);
@@ -75,6 +84,7 @@ public class Login_Register {
                 register.setFloat(5, weight);
                 register.setFloat(6, weight_goal);
                 register.setFloat(7, (float) (weight/(Math.sqrt(height/100))));
+                register.setString(8, pregnancy);
                 System.out.println(register);
                 register.executeUpdate();
 
