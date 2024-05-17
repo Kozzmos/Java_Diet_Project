@@ -12,6 +12,7 @@ public class Login_Register {
     public static String username;
     public static String password;
     public static String pregnancy;
+    public static boolean login_check = false;//login check
     public static void login(Scanner sc) throws SQLException {
 //        Establish  connection to DB
         ConnectionDB db = new ConnectionDB();
@@ -29,6 +30,7 @@ public class Login_Register {
         while (rs.next()) {
             if (rs.getString("username").equals(username) && rs.getString("password").equals(password)) {
                 System.out.println("Login Successful");
+                login_check = true; //login check
                 gender =rs.getString("gender");
                  weight =rs.getFloat("weight");
                  height =rs.getFloat("heigth");
@@ -36,6 +38,7 @@ public class Login_Register {
             } else {
                 System.out.println("Login Failed\n" +
                         "Incorrect Username or Password");
+                login_check = false; //login check
             }
         }
     }
