@@ -22,20 +22,25 @@ public class Main {
         ConnectionDB db = new ConnectionDB();
         db.connect();
 
-        System.out.printf("========Welcome========\n" +
-                          "Login        =======> 1\n" +
-                          "Register     =======> 2\n" +
-                          "Exit         =======> 3\n ");
-        int choice = sc.nextInt();
-        switch(choice){
-            case 1:  try {
+       System.out.printf("========Welcome========\n" +
+                        "Login\t\t=======> Login\n" +
+                        "Register\t=======> Register\n" +
+                        "Exit\t\t=======> Exit\n ");
+                String choice = sc.next();
+                switch(choice.toLowerCase(Locale.ROOT)){
+                    case "login":
+
+                        try {
                             Login_Register.login(sc);
                         } catch (SQLException e) {
                             throw new RuntimeException(e);
-                        } break;
-            case 2: break;
-            case 3: break;
-        }
+                        }
+                        String gender=Login_Register.gender;
+                        System.out.println(gender);
+                        break;
+                    case "register" : break;
+                    case "exit" : break;
+                }
 
         sc.close();
     }
