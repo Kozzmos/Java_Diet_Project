@@ -19,9 +19,9 @@ public class Login_Register {
         db.connect();
 //        Get the info
         System.out.println("Enter Username");
-        username = sc.nextLine();
+        username = sc.next();
         System.out.println("Enter Password");
-        password = sc.nextLine();
+        password = sc.next();
 
         PreparedStatement user_check;
         user_check = db.connect().prepareStatement("select * from users");
