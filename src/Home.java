@@ -44,7 +44,8 @@ public class Home {
                 System.out.print("Goodnight.Happy to see you here :) .\nDon't stay up late!\n");
             }
             System.out.println("Don't forget to drink water!(up to 2-3 Liters for a day)");
-            System.out.print("Welcome " + User_Info.username + ", What would you like to do?" + "\nShow Info\nMy Diet\nCalorie Library\nSports\n");
+            System.out.print("Welcome " + User_Info.username + ", What would you like to do?" +
+                    "\n->Show Info\n->My Diet\n->Calorie Library\n->Sports\n->updateinfo\n->logout");
             Scanner sc1 = new Scanner(System.in);
             String choice_main_page = sc1.nextLine();
             choice_main_page = choice_main_page.replaceAll("\\s", "");
