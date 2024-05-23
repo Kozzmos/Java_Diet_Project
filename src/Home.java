@@ -45,7 +45,7 @@ public class Home {
             }
             System.out.println("Don't forget to drink water!(up to 2-3 Liters for a day)");
             System.out.print("Welcome " + User_Info.username + ", What would you like to do?" +
-                    "\n->Show Info\n->My Diet\n->Calorie Library\n->Sports\n->updateinfo\n->logout");
+                    "\n->Show Info\n->My Diet\n->Calorie Library\n->Sports\n->Update Info\n->Logout\n");
             Scanner sc1 = new Scanner(System.in);
             String choice_main_page = sc1.nextLine();
             choice_main_page = choice_main_page.replaceAll("\\s", "");
@@ -366,9 +366,50 @@ public class Home {
 
                     break;
                 case "calorielibrary":
+                    String[] carb={"Baked potato (1 piece-173g)","Boiled potato (1 portion-200g)","French fries (1 portion-80g)","Gnocchi(1 portion-200g)","Mashed potato with milk and butter(1 portion-250g)","Roasted sweet potato(1 portion-340g)","Hash brown potato (1 portion-156g)","Ramen (1 portion-500ml)","Basmati rice (1 portion-50g)","Black rice (1 portion-50g)","Rice cake (4 piece-40g)","White rice (1 portion-50g)","Egg noodles (1 portion-50g)","Instant noodles (1 portion-80g)","Spaghetti (1 portion-50g)","Fettuccine (1 portion-80g)"};
+                    int[] carb_cal={212,177,147,326,184,381,196,312,176,181,156,257,96,206,89,283};
+                    String[] lowcalsides={"Carrot (2 pieces-120g)","Carrots,cooked (3 portion-138g)","Corn,canned (1 cup-256g)","Cucumber (1 portion-150g)","Jalapeno (6 piece-74g)","Kimchi (1 portion-50g)","Onion,raw (5 slice-65g)","Pickle (1 portion-40g)","Pumpkin (1 portion-125g)",
+                            "Low fat yogurt(150g)", "Coleslaw (1 portion-120g)","Iceberg Lettuce (1 portion-200g)","Mushrooms (1 portion-150g)","Soy yogurt (1 portion-125g)","Granola bar (1 bar-25g)","%85 dark chocolate (1 piece-4g)","After eight mints (1 piece-8g)","Fortune cookies (1 piece-8g)","M&M's (10 piece-7g)"};
+                    int[] lowcalsides_cal={46,30,81,21,24,8,25,11,36,63,30,37,36,68,81,25,34,30,36};
+                    String[] maindish_protein= {"Chicken breast,without skin (1 portion-100g)","Beef (1 portion-170g)","Beef liver,cooked(1 portion-80g)","Beef patty(4 piece-340g)","Chicken breast fillet (1 portion-100g)","Lamb Meat (1 portion-85g)","Meatball (3 piece-56g)","Hotdog with Chili (1 portion-200g)","Homemade lasagna(1 portion-232g)","Chicken Fajita (1 portion-139g)","Indian chicken curry (1 portion-350g)","Taco (1 piece-102g)","Calamari (1 portion-370g)","Fish fingers (4 piece-100g)","Lobster (1 portion-150g)","Octopus (1 portion-85g)","Tuna (1 portion-50g)","Salmon,cooked (1 portion-100g)","Salmon,baked (1 portion-85g)","Shrimp (1 portion-85g)","Tuna,canned in water (2 can-112g)" };
+                    int[] maindish_protein_cal={164,265,196,192,195,157,126,520,580,224,371,210,298,256,124,69,113,185,95,77,110};
+                    String[]morningbev={"Americano (1 cup)","Black coffee (1 cup)","Espresso (1 cup)","Turkish coffee (1 cup)"};
+                    int []morningbev_cal={9,5,1,46};
+                    String[] breakfasts={"Avocado toast (1 portion-76g)","Boiled egg (2 large piece-100g)","Egg omlette (122g)","Egg,sunny side up (2 piece-100g)","Eggy bread(1 slice-65g)","Poached egg (2 piece-100g)","Granola (1 portion-30g)","Curd cheese (1 portion-50g)","Labneh (1 portion-28g)","Sausage (1 piece-41g)","Turkey salami (112g)","Peanut butter(30g)","Oat meal (100g)","Oat meal with 1 banana (170g)"};
+                    int[] breakfast_cal = {190,138,188,144,177,166,152,43,50,79,68,180,70,139};
 
+                    System.out.println("Which category would you like to see?\nCarbs,Cheat Snacks,Side Meals,Main Dish,Breakfast,Beverages");
+                    String answer= sc1.nextLine();
+                    answer = answer.replaceAll("\\s", "");
+                    switch(answer.toLowerCase()){
+                        case "carbs":
+                            for(int i=0;i<carb.length;i++)
+                                System.out.println(carb[i]+" "+carb_cal[i]+"cal");
+                            break;
+                        case "cheatsnacks":
+                            for(int i=0;i<cheatsnacks.length;i++)
+                                System.out.println(cheatsnacks[i]+" "+cheatsnacks_cal[i]+"cal");
+                            break;
+                        case "sides":
+                            for(int i=0;i<lowcalsides.length;i++)
+                                System.out.println(lowcalsides[i]+" "+lowcalsides_cal[i]+"cal");
+                            break;
+                        case "maindish":
+                            for(int i=0;i<maindish_protein.length;i++)
+                                System.out.println(maindish_protein[i]+" "+maindish_protein_cal[i]+"cal");
+                            break;
+                        case "beverages":
+                            for(int i=0;i<morningbev.length;i++)
+                                System.out.println(morningbev[i]+" "+morningbev_cal[i]+"cal");
+                            break;
+                        case "breakfast":
+                            for(int i=0;i<breakfasts.length;i++)
+                                System.out.println(breakfasts[i]+" "+breakfast_cal[i]+"cal");
+                            break;
+                    }
                     break;
                 case "sports":
+                    System.out.println("Please note that these calculations are based on average.If you think there's a mistake you can update your weight on 'update info'.");
 
                     break;
             }
