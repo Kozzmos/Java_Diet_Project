@@ -28,6 +28,7 @@ public class Login_Register {
                 User_Info.weight_goal = rs.getFloat("goal_w");
                 User_Info.pregnancy = rs.getBoolean("pregnancy");
                 User_Info.bmi = rs.getFloat("bmi");
+                User_Info.cheatday_counter=rs.getInt("cheat_day_timer");
                 break;
             } else {
                 User_Info.login_check = false;
@@ -45,8 +46,8 @@ public class Login_Register {
         db.connect();
 
         try{PreparedStatement register = db.connect().prepareStatement("INSERT INTO users" +
-                "(username, password, gender, heigth, weight, goal_w, bmi, pregnancy)values" +
-                "(?, ?, ?, ?, ?, ?, ?, ?)");
+                "(username, password, gender, heigth, weight, goal_w, bmi, pregnancy,cheat_day_timer)values" +
+                "(?, ?, ?, ?, ?, ?, ?, ?, ?)");
             {
                 System.out.print("Enter username:\n");
                 PreparedStatement if_user_exist;
@@ -88,8 +89,9 @@ public class Login_Register {
                 register.setFloat(5, User_Info.weight=Main.sc.nextFloat());
                 System.out.print("Enter your target weight(kg):\n");
                 register.setFloat(6, User_Info.weight_goal=Main.sc.nextFloat());
-                User_Info.bmi = (User_Info.weight / (((User_Info.height / 100))*(User_Info.height / 100)));
+                User_Info.bmi = (User_Info.weight / (((User_Info.height / 100)*(User_Info.height / 100))));
                 register.setFloat(7,User_Info.bmi);
+                register.setInt(9,1);
                 System.out.println(register);
                 register.executeUpdate();
             }
