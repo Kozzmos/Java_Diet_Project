@@ -5,6 +5,7 @@ public class User_Info {
     public static Float weight_goal;
     public static String username;
     public static String password;
+    public static int cheatday_counter;
     public static Boolean pregnancy;
     public static boolean login_check = false;
     public static Float bmi;
