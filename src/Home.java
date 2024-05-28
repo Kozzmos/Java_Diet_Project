@@ -29,8 +29,8 @@ public class Home {
         String[] maindishes_protein = {"Chicken breast,without skin (1 portion-100g)", "Beef (1 portion-170g)", "Beef liver,cooked(1 portion-80g)", "Beef patty(4 piece-340g)", "Chicken breast fillet (1 portion-100g)", "Lamb Meat (1 portion-85g)", "Meatball (3 piece-56g)", "Chicken Fajita (1 portion-139g)", "Indian chicken curry (1 portion-350g)", "Taco (1 piece-102g)", "Calamari (1 portion-370g)", "Fish fingers (4 piece-100g)", "Lobster (1 portion-150g)", "Octopus (1 portion-85g)", "Tuna (1 portion-50g)", "Salmon,cooked (1 portion-100g)", "Salmon,baked (1 portion-85g)", "Shrimp (1 portion-85g)", "Tuna,canned in water (2 can-112g)"};
         int[] maindishes_protein_cal = {164, 265, 196, 192, 195, 157, 126, 224, 371, 210, 298, 256, 124, 69, 113, 185, 95, 77, 110};
 
-        String[] morning_bev = {"Americano (1 cup)", "Black coffee (1 cup)", "Espresso (1 cup)", "Turkish coffee (1 cup)"};
-        int[] morning_bev_cal = {9, 5, 1, 46};
+        String[] bev = {"Americano (1 cup)", "Black coffee (1 cup)", "Espresso (1 cup)", "Turkish coffee (1 cup)","Diet Coke","Diet Sprite","Juice"};
+        int[] bev_cal = {9, 5, 1, 46, 1, 2, 54};
         //these strings store foods and their call
 
         while(true) {
@@ -61,6 +61,7 @@ public class Home {
                     break;
                 case "mydiet":
 
+                    if(User_Info.cheatday_counter!=93){
                     if (hour < 11) { //this part is for breakfast
                         int random_b;
                         int sumbreakfastcal;
@@ -69,13 +70,12 @@ public class Home {
 
                         if (User_Info.bmi < 18.5 && User_Info.gender.equals("female")) {
                             do {
-
                                 sumbreakfastcal = 0;
-                                random_b = random.nextInt(4);
+                                random_b = random.nextInt(0,6);
                                 breakfastdiet[0] = breakfast[random_b];
                                 sumbreakfastcal += breakfast_calories[random_b];
 
-                                random_b = random.nextInt(5, 14);
+                                random_b = random.nextInt(6, 14);
                                 breakfastdiet[1] = breakfast[random_b];
                                 sumbreakfastcal += breakfast_calories[random_b];
 
@@ -83,9 +83,9 @@ public class Home {
                                 breakfastdiet[2] = lowcalside[random_b];
                                 sumbreakfastcal += lowcalside_cal[random_b];
 
-                                random_b = random.nextInt(morning_bev.length);
-                                breakfastdiet[3] = morning_bev[random_b];
-                                sumbreakfastcal += morning_bev_cal[random_b];
+                                random_b = random.nextInt(0,4);
+                                breakfastdiet[3] = bev[random_b];
+                                sumbreakfastcal += bev_cal[random_b];
 
                             } while (sumbreakfastcal > 600 || sumbreakfastcal < 500);
 
@@ -98,13 +98,12 @@ public class Home {
 
                         if (User_Info.bmi < 18.5 && User_Info.gender.equals("male")) {
                             do {
-
                                 sumbreakfastcal = 0;
-                                random_b = random.nextInt(4);
+                                random_b = random.nextInt(0,6);
                                 breakfastdiet[0] = breakfast[random_b];
                                 sumbreakfastcal += breakfast_calories[random_b];
 
-                                random_b = random.nextInt(5, 14);
+                                random_b = random.nextInt(6, 14);
                                 breakfastdiet[1] = breakfast[random_b];
                                 sumbreakfastcal += breakfast_calories[random_b];
 
@@ -112,10 +111,10 @@ public class Home {
                                 breakfastdiet[2] = lowcalside[random_b];
                                 sumbreakfastcal += lowcalside_cal[random_b];
 
-                                random_b = random.nextInt(morning_bev.length);
-                                breakfastdiet[3] = morning_bev[random_b];
-                                sumbreakfastcal += morning_bev_cal[random_b];
-                            } while (sumbreakfastcal > 700 || sumbreakfastcal < 600);
+                                random_b = random.nextInt(0,4);
+                                breakfastdiet[3] = bev[random_b];
+                                sumbreakfastcal += bev_cal[random_b];
+                            } while ( sumbreakfastcal < 600);
                             for (int a = 0; a < 4; a++) {
                                 System.out.print(breakfastdiet[a] + "\n");
                             }
@@ -126,11 +125,11 @@ public class Home {
                         if (User_Info.bmi >= 25 && User_Info.gender.equals("female")) {
                             do {
                                 sumbreakfastcal = 0;
-                                random_b = random.nextInt(4);
+                                random_b = random.nextInt(0,6);
                                 breakfastdiet[0] = breakfast[random_b];
                                 sumbreakfastcal += breakfast_calories[random_b];
 
-                                random_b = random.nextInt(5, 14);
+                                random_b = random.nextInt(6, 14);
                                 breakfastdiet[1] = breakfast[random_b];
                                 sumbreakfastcal += breakfast_calories[random_b];
 
@@ -138,9 +137,9 @@ public class Home {
                                 breakfastdiet[2] = lowcalside[random_b];
                                 sumbreakfastcal += lowcalside_cal[random_b];
 
-                                random_b = random.nextInt(morning_bev.length);
-                                breakfastdiet[3] = morning_bev[random_b];
-                                sumbreakfastcal += morning_bev_cal[random_b];
+                                random_b = random.nextInt(0,4);
+                                breakfastdiet[3] = bev[random_b];
+                                sumbreakfastcal += bev_cal[random_b];
 
                             } while (sumbreakfastcal > 500 || sumbreakfastcal < 400);
 
@@ -155,11 +154,11 @@ public class Home {
                             do {
 
                                 sumbreakfastcal = 0;
-                                random_b = random.nextInt(4);
+                                random_b = random.nextInt(0,6);
                                 breakfastdiet[0] = breakfast[random_b];
                                 sumbreakfastcal += breakfast_calories[random_b];
 
-                                random_b = random.nextInt(5, 14);
+                                random_b = random.nextInt(6, 14);
                                 breakfastdiet[1] = breakfast[random_b];
                                 sumbreakfastcal += breakfast_calories[random_b];
 
@@ -167,9 +166,9 @@ public class Home {
                                 breakfastdiet[2] = lowcalside[random_b];
                                 sumbreakfastcal += lowcalside_cal[random_b];
 
-                                random_b = random.nextInt(morning_bev.length);
-                                breakfastdiet[3] = morning_bev[random_b];
-                                sumbreakfastcal += morning_bev_cal[random_b];
+                                random_b = random.nextInt(0,4);
+                                breakfastdiet[3] = bev[random_b];
+                                sumbreakfastcal += bev_cal[random_b];
                             } while (sumbreakfastcal > 600 || sumbreakfastcal < 500);
                             for (int a = 0; a < 4; a++) {
                                 System.out.print(breakfastdiet[a] + "\n");
@@ -178,6 +177,7 @@ public class Home {
                             System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
 
                         }
+                        User_Info.cheatday_counter+=1;
                     }
 
                     if (hour >= 11) { //this part is for lunch
@@ -203,9 +203,9 @@ public class Home {
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
-                                random_b = random.nextInt(morning_bev.length);
-                                mealdiet[3] = morning_bev[random_b];
-                                summealcal += morning_bev_cal[random_b];
+                                random_b = random.nextInt(4,8);
+                                mealdiet[3] = bev[random_b];
+                                summealcal += bev_cal[random_b];
 
                             } while (summealcal > 800 || summealcal < 700);
 
@@ -232,9 +232,9 @@ public class Home {
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
-                                random_b = random.nextInt(morning_bev.length);
-                                mealdiet[3] = morning_bev[random_b];
-                                summealcal += morning_bev_cal[random_b];
+                                random_b = random.nextInt(4,8);
+                                mealdiet[3] = bev[random_b];
+                                summealcal += bev_cal[random_b];
 
                             } while (summealcal > 900 || summealcal < 800);
 
@@ -260,9 +260,9 @@ public class Home {
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
-                                random_b = random.nextInt(morning_bev.length);
-                                mealdiet[3] = morning_bev[random_b];
-                                summealcal += morning_bev_cal[random_b];
+                                random_b = random.nextInt(4,8);
+                                mealdiet[3] = bev[random_b];
+                                summealcal += bev_cal[random_b];
 
                             } while (summealcal > 700 || summealcal < 600);
 
@@ -288,9 +288,9 @@ public class Home {
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
-                                random_b = random.nextInt(morning_bev.length);
-                                mealdiet[3] = morning_bev[random_b];
-                                summealcal += morning_bev_cal[random_b];
+                                random_b = random.nextInt(4,8);
+                                mealdiet[3] = bev[random_b];
+                                summealcal += bev_cal[random_b];
 
                             } while (summealcal > 850 || summealcal < 750);
 
@@ -317,9 +317,9 @@ public class Home {
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
-                                random_b = random.nextInt(morning_bev.length);
-                                mealdiet[3] = morning_bev[random_b];
-                                summealcal += morning_bev_cal[random_b];
+                                random_b = random.nextInt(4,8);
+                                mealdiet[3] = bev[random_b];
+                                summealcal += bev_cal[random_b];
 
                             } while (summealcal > 600 || summealcal < 500);
 
@@ -346,9 +346,9 @@ public class Home {
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
-                                random_b = random.nextInt(morning_bev.length);
-                                mealdiet[3] = morning_bev[random_b];
-                                summealcal += morning_bev_cal[random_b];
+                                random_b = random.nextInt(4,8);
+                                mealdiet[3] = bev[random_b];
+                                summealcal += bev_cal[random_b];
 
                             } while (summealcal > 700 || summealcal < 600);
 
@@ -358,7 +358,11 @@ public class Home {
                             System.out.println("Sum Meal Calories: " + summealcal);
                             System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                         }
+                        User_Info.cheatday_counter+=1;
                     }
+                    }
+                    else
+                        System.out.println("Congrats!You've been determined through 31 days and we owe you a CHEAT DAY!You can eat whatever you want today.\n");
 
                     if (hour >= 20 && User_Info.bmi >= 25) {
                         System.out.println("Don't eat something for 4 hours before bed!");
@@ -373,8 +377,6 @@ public class Home {
                     int[] lowcalsides_cal={46,30,81,21,24,8,25,11,36,63,30,37,36,68,81,25,34,30,36};
                     String[] maindish_protein= {"Chicken breast,without skin (1 portion-100g)","Beef (1 portion-170g)","Beef liver,cooked(1 portion-80g)","Beef patty(4 piece-340g)","Chicken breast fillet (1 portion-100g)","Lamb Meat (1 portion-85g)","Meatball (3 piece-56g)","Hotdog with Chili (1 portion-200g)","Homemade lasagna(1 portion-232g)","Chicken Fajita (1 portion-139g)","Indian chicken curry (1 portion-350g)","Taco (1 piece-102g)","Calamari (1 portion-370g)","Fish fingers (4 piece-100g)","Lobster (1 portion-150g)","Octopus (1 portion-85g)","Tuna (1 portion-50g)","Salmon,cooked (1 portion-100g)","Salmon,baked (1 portion-85g)","Shrimp (1 portion-85g)","Tuna,canned in water (2 can-112g)" };
                     int[] maindish_protein_cal={164,265,196,192,195,157,126,520,580,224,371,210,298,256,124,69,113,185,95,77,110};
-                    String[]morningbev={"Americano (1 cup)","Black coffee (1 cup)","Espresso (1 cup)","Turkish coffee (1 cup)"};
-                    int []morningbev_cal={9,5,1,46};
                     String[] breakfasts={"Avocado toast (1 portion-76g)","Boiled egg (2 large piece-100g)","Egg omlette (122g)","Egg,sunny side up (2 piece-100g)","Eggy bread(1 slice-65g)","Poached egg (2 piece-100g)","Granola (1 portion-30g)","Curd cheese (1 portion-50g)","Labneh (1 portion-28g)","Sausage (1 piece-41g)","Turkey salami (112g)","Peanut butter(30g)","Oat meal (100g)","Oat meal with 1 banana (170g)"};
                     int[] breakfast_cal = {190,138,188,144,177,166,152,43,50,79,68,180,70,139};
 
@@ -399,8 +401,8 @@ public class Home {
                                 System.out.println(maindish_protein[i]+" "+maindish_protein_cal[i]+"cal");
                             break;
                         case "beverages":
-                            for(int i=0;i<morningbev.length;i++)
-                                System.out.println(morningbev[i]+" "+morningbev_cal[i]+"cal");
+                            for(int i=0;i<bev.length;i++)
+                                System.out.println(bev[i]+" "+bev_cal[i]+"cal");
                             break;
                         case "breakfast":
                             for(int i=0;i<breakfasts.length;i++)
