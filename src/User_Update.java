@@ -31,7 +31,7 @@ public class User_Update {
                     System.out.print("Enter the new height:\n");
                     update = db.connect().prepareStatement("update users set heigth = ?, bmi = ? where username=?");
                     update.setString(3, User_Info.username);
-                    update.setFloat(1, User_Info.height = Main.sc.nextFloat());
+                    update.setFloat(1, User_Info.height = Main.sc.nextInt());
                     update.setFloat(2, User_Info.bmi = (User_Info.weight / (((User_Info.height / 100)) * (User_Info.height / 100))));
                     update.executeUpdate();
                     System.out.print("Height changed successfully:\n");

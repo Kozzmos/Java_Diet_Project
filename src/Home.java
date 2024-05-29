@@ -7,27 +7,22 @@ public class Home {
     public static void home() throws SQLException {
         Calendar calendar = Calendar.getInstance();
 
-        //breakfast   --->17 elements
-        //lowcal      --->17 elements
-        //morningbev  ---> 4 elements
-        //cheatsnacks --->16 elements
-        //carbs       --->16 elements
-        //maindish_protein --->19 elements
-        String[] carbs = {"Baked potato (1 piece-173g)", "Boiled potato (1 portion-200g)", "Mashed potato with milk and butter(1 portion-250g)", "Roasted sweet potato(1 portion-340g)", "Hash brown potato (1 portion-156g)", "Ramen (1 portion)", "Basmati rice (1 portion-50g)", "Black rice (1 portion-50g)", "Rice cake (4 piece-40g)", "White rice (1 portion-50g)", "Egg noodles (1 portion-160g)", "Spaghetti (1 portion-140g)", "Fettuccine (1 portion-80g)"};
-        int[] carbs_cal = {212, 177, 184, 381, 196, 432, 176, 181, 156, 257, 221, 221, 283};
+        String[] carbs = {"Baked potato (1 piece-173g)", "Boiled potato (1 portion-200g)", "Mashed potato with milk and butter(1 portion-250g)", "Roasted sweet potato(1 portion-340g)", "Hash brown potato (1 portion-156g)", "Ramen (1 portion)", "Basmati rice (1 portion-50g)", "Black rice (1 portion-50g)", "Rice cake (4 piece-40g)", "White rice (1 portion-50g)", "Egg noodles (1 portion-160g)", "Spaghetti (1 portion-140g)", "Fettuccine (1 portion-80g)"
+        ,"French fries (1 portion-80g)","Gnocchi(1 portion-200g)","Instant noodles (1 portion-80g)"};
+        int[] carbs_cal = {212, 177, 184, 381, 196, 432, 176, 181, 156, 257, 221, 221, 283, 196, 250, 188};
 
         String[] breakfast = {"Avocado toast (1 portion-76g)", "Boiled egg (2 large piece-100g)", "Egg omlette (122g)", "Egg,sunny side up (2 piece-100g)", "Eggy bread(1 slice-65g)", "Poached egg (2 piece-100g)", "Granola (1 portion-30g)", "Curd cheese (1 portion-50g)", "Labneh (1 portion-28g)", "Sausage (1 piece-41g)", "Turkey salami (112g)", "Peanut butter(30g)", "Oat meal (100g)", "Oat meal with 1 banana (170g)"};
         int[] breakfast_calories = {190, 138, 188, 144, 177, 166, 152, 43, 50, 79, 68, 180, 70, 139};
 
         String[] lowcalside = {"Hazelnut (1 portion-30g)", "Almond (30 piece-30gr)", "Low fat yogurt(150g)", "Carrot (2 pieces-120g)", "Carrots,cooked (3 portion-138g)", "Corn,canned (1 cup-256g)", "Cucumber (1 portion-150g)", "Jalapeno (6 piece-74g)", "Kimchi (1 portion-38g)", "Onion,raw (5 slice-65g)", "Pickle (1 portion-40g)", "Pumpkin (1 portion-125g)",
-                "Iceberg Lettuce (1 portion-200g)", "Mushrooms (1 portion-150g)", "Granola bar (1 bar-25g)", "%85 dark chocolate (1 piece-4g)"};
-        int[] lowcalside_cal = {202, 180, 63, 46, 30, 81, 21, 24, 8, 25, 11, 36, 37, 36, 81, 25};
+                "Iceberg Lettuce (1 portion-200g)", "Mushrooms (1 portion-150g)", "Granola bar (1 bar-25g)", "%85 dark chocolate (1 piece-4g)","Coleslaw (1 portion-120g)","Fortune cookies (1 piece-8g)"};
+        int[] lowcalside_cal = {202, 180, 63, 46, 30, 81, 21, 24, 8, 25, 11, 36, 37, 36, 81, 25, 174, 30};
 
         String[] cheatsnacks = {"Chips (1 portion-30g)", "Caramel Popcorn (1 portion-32g)", "Corn chips (1 portion-30g)", "Doritos (1 portion-28g)", "Flaming hot cheetos (1 portion-28g)", "Popcorn, oil popped (1 portion-30g)", "Soy chips (1 portion-29g)", "Souffle (1 portion-60g)", "Birthday cake (1 piece-85g)", "Candy apple (1 piece-320g)", "Chocolate chip cookie (1 piece-56g)", "Dark chocolate (1 portion-30g)", "Glazed donut (1 portion-79g)", "Gummy bears (1 portion-40g)", "Lollipop (1 piece-12g)"};
         int[] cheatsnacks_cal = {170, 118, 144, 145, 160, 98, 156, 269, 340, 429, 276, 155, 330, 137, 47};
 
-        String[] maindishes_protein = {"Chicken breast,without skin (1 portion-100g)", "Beef (1 portion-170g)", "Beef liver,cooked(1 portion-80g)", "Beef patty(4 piece-340g)", "Chicken breast fillet (1 portion-100g)", "Lamb Meat (1 portion-85g)", "Meatball (3 piece-56g)", "Chicken Fajita (1 portion-139g)", "Indian chicken curry (1 portion-350g)", "Taco (1 piece-102g)", "Calamari (1 portion-370g)", "Fish fingers (4 piece-100g)", "Lobster (1 portion-150g)", "Octopus (1 portion-85g)", "Tuna (1 portion-50g)", "Salmon,cooked (1 portion-100g)", "Salmon,baked (1 portion-85g)", "Shrimp (1 portion-85g)", "Tuna,canned in water (2 can-112g)"};
-        int[] maindishes_protein_cal = {164, 265, 196, 192, 195, 157, 126, 224, 371, 210, 298, 256, 124, 69, 113, 185, 95, 77, 110};
+        String[] maindishes_protein = {"Chicken breast,without skin (1 portion-100g)", "Beef (1 portion-170g)", "Beef liver,cooked(1 portion-80g)", "Beef patty(4 piece-340g)", "Chicken breast fillet (1 portion-100g)", "Lamb Meat (1 portion-85g)", "Meatball (3 piece-56g)", "Chicken Fajita (1 portion-139g)", "Indian chicken curry (1 portion-350g)", "Taco (1 piece-102g)", "Calamari (1 portion-370g)", "Fish fingers (4 piece-100g)", "Lobster (1 portion-150g)", "Octopus (1 portion-85g)", "Tuna (1 portion-50g)", "Salmon,cooked (1 portion-100g)", "Salmon,baked (1 portion-85g)", "Shrimp (1 portion-85g)", "Tuna,canned in water (2 can-112g)","Hot dog (1 portion-48g)","Lasagna (1 portion-206g)","Taco (1 serving)"};
+        int[] maindishes_protein_cal = {164, 265, 196, 192, 195, 157, 126, 224, 371, 210, 298, 256, 124, 69, 113, 185, 95, 77, 110, 155, 336, 170};
 
         String[] bev = {"Americano (1 cup)", "Black coffee (1 cup)", "Espresso (1 cup)", "Turkish coffee (1 cup)","Diet Coke","Diet Sprite","Juice"};
         int[] bev_cal = {9, 5, 1, 46, 1, 2, 54};
@@ -112,7 +107,7 @@ public class Home {
                     if (hour < 11) { //this part is for breakfast
                         int random_b;
                         int sumbreakfastcal;
-                        String[] breakfastdiet = new String[5];
+                        String[] breakfastdiet = new String[4];
                         Random random = new Random();
 
                         if (User_Info.bmi < 18.5 && User_Info.gender.equals("female")) {
@@ -238,15 +233,15 @@ public class Home {
 
                                 summealcal = 0;
 
-                                random_b = random.nextInt(maindishes_protein.length);
+                                random_b = random.nextInt(0,19);
                                 mealdiet[0] = maindishes_protein[random_b];
                                 summealcal += maindishes_protein_cal[random_b];
 
-                                random_b = random.nextInt(carbs.length);
+                                random_b = random.nextInt(0,13);
                                 mealdiet[1] = carbs[random_b];
                                 summealcal += carbs_cal[random_b];
 
-                                random_b = random.nextInt(2, lowcalside.length);
+                                random_b = random.nextInt(2, 12);
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
@@ -267,15 +262,15 @@ public class Home {
 
                                 summealcal = 0;
 
-                                random_b = random.nextInt(maindishes_protein.length);
+                                random_b = random.nextInt(0,19);
                                 mealdiet[0] = maindishes_protein[random_b];
                                 summealcal += maindishes_protein_cal[random_b];
 
-                                random_b = random.nextInt(carbs.length);
+                                random_b = random.nextInt(0,13);
                                 mealdiet[1] = carbs[random_b];
                                 summealcal += carbs_cal[random_b];
 
-                                random_b = random.nextInt(2, lowcalside.length);
+                                random_b = random.nextInt(2, 12);
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
@@ -295,15 +290,15 @@ public class Home {
                             do {
                                 summealcal = 0;
 
-                                random_b = random.nextInt(maindishes_protein.length);
+                                random_b = random.nextInt(0,19);
                                 mealdiet[0] = maindishes_protein[random_b];
                                 summealcal += maindishes_protein_cal[random_b];
 
-                                random_b = random.nextInt(carbs.length);
+                                random_b = random.nextInt(0,13);
                                 mealdiet[1] = carbs[random_b];
                                 summealcal += carbs_cal[random_b];
 
-                                random_b = random.nextInt(2, lowcalside.length);
+                                random_b = random.nextInt(2, 12);
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
@@ -323,15 +318,15 @@ public class Home {
                             do {
                                 summealcal = 0;
 
-                                random_b = random.nextInt(maindishes_protein.length);
+                                random_b = random.nextInt(0,19);
                                 mealdiet[0] = maindishes_protein[random_b];
                                 summealcal += maindishes_protein_cal[random_b];
 
-                                random_b = random.nextInt(carbs.length);
+                                random_b = random.nextInt(0,13);
                                 mealdiet[1] = carbs[random_b];
                                 summealcal += carbs_cal[random_b];
 
-                                random_b = random.nextInt(2, lowcalside.length);
+                                random_b = random.nextInt(2, 12);
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
@@ -352,15 +347,15 @@ public class Home {
                             do {
                                 summealcal = 0;
 
-                                random_b = random.nextInt(maindishes_protein.length);
+                                random_b = random.nextInt(0,19);
                                 mealdiet[0] = maindishes_protein[random_b];
                                 summealcal += maindishes_protein_cal[random_b];
 
-                                random_b = random.nextInt(carbs.length);
+                                random_b = random.nextInt(0,13);
                                 mealdiet[1] = carbs[random_b];
                                 summealcal += carbs_cal[random_b];
 
-                                random_b = random.nextInt(2, lowcalside.length);
+                                random_b = random.nextInt(2, 12);
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
@@ -381,15 +376,15 @@ public class Home {
                             do {
                                 summealcal = 0;
 
-                                random_b = random.nextInt(maindishes_protein.length);
+                                random_b = random.nextInt(0,19);
                                 mealdiet[0] = maindishes_protein[random_b];
                                 summealcal += maindishes_protein_cal[random_b];
 
-                                random_b = random.nextInt(carbs.length);
+                                random_b = random.nextInt(0,13);
                                 mealdiet[1] = carbs[random_b];
                                 summealcal += carbs_cal[random_b];
 
-                                random_b = random.nextInt(2, lowcalside.length);
+                                random_b = random.nextInt(2, 12);
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
@@ -417,15 +412,6 @@ public class Home {
 
                     break;
                 case "calorielibrary":
-                    String[] carb={"Baked potato (1 piece-173g)","Boiled potato (1 portion-200g)","French fries (1 portion-80g)","Gnocchi(1 portion-200g)","Mashed potato with milk and butter(1 portion-250g)","Roasted sweet potato(1 portion-340g)","Hash brown potato (1 portion-156g)","Ramen (1 portion-500ml)","Basmati rice (1 portion-50g)","Black rice (1 portion-50g)","Rice cake (4 piece-40g)","White rice (1 portion-50g)","Egg noodles (1 portion-50g)","Instant noodles (1 portion-80g)","Spaghetti (1 portion-50g)","Fettuccine (1 portion-80g)"};
-                    int[] carb_cal={212,177,147,326,184,381,196,312,176,181,156,257,96,206,89,283};
-                    String[] lowcalsides={"Carrot (2 pieces-120g)","Carrots,cooked (3 portion-138g)","Corn,canned (1 cup-256g)","Cucumber (1 portion-150g)","Jalapeno (6 piece-74g)","Kimchi (1 portion-50g)","Onion,raw (5 slice-65g)","Pickle (1 portion-40g)","Pumpkin (1 portion-125g)",
-                            "Low fat yogurt(150g)", "Coleslaw (1 portion-120g)","Iceberg Lettuce (1 portion-200g)","Mushrooms (1 portion-150g)","Soy yogurt (1 portion-125g)","Granola bar (1 bar-25g)","%85 dark chocolate (1 piece-4g)","After eight mints (1 piece-8g)","Fortune cookies (1 piece-8g)","M&M's (10 piece-7g)"};
-                    int[] lowcalsides_cal={46,30,81,21,24,8,25,11,36,63,30,37,36,68,81,25,34,30,36};
-                    String[] maindish_protein= {"Chicken breast,without skin (1 portion-100g)","Beef (1 portion-170g)","Beef liver,cooked(1 portion-80g)","Beef patty(4 piece-340g)","Chicken breast fillet (1 portion-100g)","Lamb Meat (1 portion-85g)","Meatball (3 piece-56g)","Hotdog with Chili (1 portion-200g)","Homemade lasagna(1 portion-232g)","Chicken Fajita (1 portion-139g)","Indian chicken curry (1 portion-350g)","Taco (1 piece-102g)","Calamari (1 portion-370g)","Fish fingers (4 piece-100g)","Lobster (1 portion-150g)","Octopus (1 portion-85g)","Tuna (1 portion-50g)","Salmon,cooked (1 portion-100g)","Salmon,baked (1 portion-85g)","Shrimp (1 portion-85g)","Tuna,canned in water (2 can-112g)" };
-                    int[] maindish_protein_cal={164,265,196,192,195,157,126,520,580,224,371,210,298,256,124,69,113,185,95,77,110};
-                    String[] breakfasts={"Avocado toast (1 portion-76g)","Boiled egg (2 large piece-100g)","Egg omlette (122g)","Egg,sunny side up (2 piece-100g)","Eggy bread(1 slice-65g)","Poached egg (2 piece-100g)","Granola (1 portion-30g)","Curd cheese (1 portion-50g)","Labneh (1 portion-28g)","Sausage (1 piece-41g)","Turkey salami (112g)","Peanut butter(30g)","Oat meal (100g)","Oat meal with 1 banana (170g)"};
-                    int[] breakfast_cal = {190,138,188,144,177,166,152,43,50,79,68,180,70,139};
                     String answer;
 
                     do {
@@ -434,28 +420,28 @@ public class Home {
                         answer = answer.replaceAll("\\s", "");
                         switch (answer.toLowerCase()) {
                             case "carbs":
-                                for (int i = 0; i < carb.length; i++)
-                                    System.out.printf("%-50s %d cal\n", carb[i], carb_cal[i]);
+                                for (int i = 0; i < carbs.length; i++)
+                                    System.out.printf("%-50s %d cal\n", carbs[i], carbs_cal[i]);
                                 break;
                             case "cheatsnacks":
                                 for (int i = 0; i < cheatsnacks.length; i++)
                                     System.out.printf("%-40s %d cal\n", cheatsnacks[i], cheatsnacks_cal[i]);
                                 break;
                             case "sidemeals":
-                                for (int i = 0; i < lowcalsides.length; i++)
-                                    System.out.printf("%-35s %d cal\n", lowcalsides[i], lowcalsides_cal[i]);
+                                for (int i = 0; i < lowcalside.length; i++)
+                                    System.out.printf("%-35s %d cal\n", lowcalside[i], lowcalside_cal[i]);
                                 break;
                             case "maindish":
-                                for (int i = 0; i < maindish_protein.length; i++)
-                                    System.out.printf("%-50s %d cal\n", maindish_protein[i], maindish_protein_cal[i]);
+                                for (int i = 0; i < maindishes_protein.length; i++)
+                                    System.out.printf("%-50s %d cal\n", maindishes_protein[i], maindishes_protein_cal[i]);
                                 break;
                             case "beverages":
                                 for (int i = 0; i < bev.length; i++)
                                     System.out.printf("%-25s %d cal\n", bev[i], bev_cal[i]);
                                 break;
                             case "breakfast":
-                                for (int i = 0; i < breakfasts.length; i++)
-                                    System.out.printf("%-40s %d cal\n", breakfasts[i], breakfast_cal[i]);
+                                for (int i = 0; i < breakfast.length; i++)
+                                    System.out.printf("%-40s %d cal\n", breakfast[i], breakfast_calories[i]);
                                 break;
                             case "exit":
                                 break;

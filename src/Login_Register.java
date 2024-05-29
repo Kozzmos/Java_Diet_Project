@@ -24,7 +24,7 @@ public class Login_Register {
                 User_Info.login_check = true;
                 User_Info.gender = rs.getString("gender");
                 User_Info.weight = rs.getFloat("weight");
-                User_Info.height = rs.getFloat("heigth");
+                User_Info.height = rs.getInt("heigth");
                 User_Info.weight_goal = rs.getFloat("goal_w");
                 User_Info.pregnancy = rs.getBoolean("pregnancy");
                 User_Info.bmi = rs.getFloat("bmi");
@@ -85,10 +85,10 @@ public class Login_Register {
                 }else register.setBoolean(8, false);
 
                 System.out.print("Enter height(cm):");
-                register.setFloat(4, User_Info.height=Main.sc.nextFloat());
+                register.setFloat(4, User_Info.height=Main.sc.nextInt());
                 System.out.print("Enter weight(kg):");
                 register.setFloat(5, User_Info.weight=Main.sc.nextFloat());
-                System.out.printf("Our advice on your ideal weight is %.0f kg.\n", 20*((User_Info.height*User_Info.height)/10000));
+                System.out.printf("Our advice on your ideal weight is %d kg.\n", (User_Info.height-110));
                 User_Info.bmi = (User_Info.weight / (((User_Info.height / 100)*(User_Info.height / 100))));
                 int wg;
                 do{
