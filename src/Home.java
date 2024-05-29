@@ -64,7 +64,39 @@ public class Home {
                             if (User_Info.bmi<20) {
                                 System.out.print("Your BMI value is low("+User_Info.bmi+", you should gain more weight!\n");
                             } else if (User_Info.bmi == 20) {
-                                System.out.print("WOW you are so healthy with BMI value of 20! How is this even possible?\n");
+                                System.out.print("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣶⡀⠀⠀⣴⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣶⣶⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⢀⡄⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣶⣶⣶⣾⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢻⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣴⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣴⣶⣿⣿⡿⠿⠟⠛⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠻⠿⢿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⡇⠀⠀⣀⣤⣶⣿⣿⡿⠿⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⢿⣿⣷⣦⡀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣧⣴⣿⡿⠿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠈⠙⢻⣿⣧⡀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⡿⠇⠀⠀⠀⠀⠙⣿⣷⡀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⠟⢻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⡧⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⡟⠁⠀⠸⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⣀⣀⣀⣀⣤⣤⣴⣾⡿⠃⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⡟⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⣀⣄⣠⣤⣤⣴⣶⣾⣿⣶⣾⣿⣿⣿⣿⡿⠿⠿⠿⠿⠟⠛⠛⠁⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⠀⣾⣿⠏⠀⠀⠀⠀⠀⣸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⠿⠿⠿⠿⠿⠿⠿⠿⠟⠻⣛⣟⣿⣿⡍⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⠀⣼⣿⠏⠀⠀⠀⠀⠀⠀⢸⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠹⢆⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⠀⣼⣿⡟⠀⠀⠀⠀⠀⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠓⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⠀⣼⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠿⣿⣦⣤⣤⣄⣀⣀⣀⣠⣤⠜⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⢀⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⢰⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⣼⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠀⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⢸⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⣾⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢼⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⢀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⢸⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⢿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                                "⠀⠙⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"+"WOW you are so healthy with BMI value of 20! How is this even possible?\n");
                             } else if (User_Info.bmi < 25) {
                                 System.out.print("You are healthy with BMI value of"+User_Info.bmi+". Keep being healthy!\n");
                             }
@@ -394,36 +426,43 @@ public class Home {
                     int[] maindish_protein_cal={164,265,196,192,195,157,126,520,580,224,371,210,298,256,124,69,113,185,95,77,110};
                     String[] breakfasts={"Avocado toast (1 portion-76g)","Boiled egg (2 large piece-100g)","Egg omlette (122g)","Egg,sunny side up (2 piece-100g)","Eggy bread(1 slice-65g)","Poached egg (2 piece-100g)","Granola (1 portion-30g)","Curd cheese (1 portion-50g)","Labneh (1 portion-28g)","Sausage (1 piece-41g)","Turkey salami (112g)","Peanut butter(30g)","Oat meal (100g)","Oat meal with 1 banana (170g)"};
                     int[] breakfast_cal = {190,138,188,144,177,166,152,43,50,79,68,180,70,139};
+                    String answer;
 
-                    System.out.println("Which category would you like to see?\nCarbs,Cheat Snacks,Side Meals,Main Dish,Breakfast,Beverages");
-                    String answer= sc1.nextLine();
-                    answer = answer.replaceAll("\\s", "");
-                    switch(answer.toLowerCase()){
-                        case "carbs":
-                            for(int i=0;i<carb.length;i++)
-                                System.out.println(carb[i]+" "+carb_cal[i]+"cal");
+                    do {
+                        System.out.println("Which category would you like to see?\nCarbs,Cheat Snacks,Side Meals,Main Dish,Breakfast,Beverages");
+                        answer = sc1.nextLine();
+                        answer = answer.replaceAll("\\s", "");
+                        switch (answer.toLowerCase()) {
+                            case "carbs":
+                                for (int i = 0; i < carb.length; i++)
+                                    System.out.printf("%-50s %d cal\n", carb[i], carb_cal[i]);
+                                break;
+                            case "cheatsnacks":
+                                for (int i = 0; i < cheatsnacks.length; i++)
+                                    System.out.printf("%-40s %d cal\n", cheatsnacks[i], cheatsnacks_cal[i]);
+                                break;
+                            case "sidemeals":
+                                for (int i = 0; i < lowcalsides.length; i++)
+                                    System.out.printf("%-35s %d cal\n", lowcalsides[i], lowcalsides_cal[i]);
+                                break;
+                            case "maindish":
+                                for (int i = 0; i < maindish_protein.length; i++)
+                                    System.out.printf("%-50s %d cal\n", maindish_protein[i], maindish_protein_cal[i]);
+                                break;
+                            case "beverages":
+                                for (int i = 0; i < bev.length; i++)
+                                    System.out.printf("%-25s %d cal\n", bev[i], bev_cal[i]);
+                                break;
+                            case "breakfast":
+                                for (int i = 0; i < breakfasts.length; i++)
+                                    System.out.printf("%-40s %d cal\n", breakfasts[i], breakfast_cal[i]);
+                                break;
+                            case "exit":
+                                break;
+                        } if (answer.equalsIgnoreCase("exit")){
                             break;
-                        case "cheatsnacks":
-                            for(int i=0;i<cheatsnacks.length;i++)
-                                System.out.println(cheatsnacks[i]+" "+cheatsnacks_cal[i]+"cal");
-                            break;
-                        case "sides":
-                            for(int i=0;i<lowcalsides.length;i++)
-                                System.out.println(lowcalsides[i]+" "+lowcalsides_cal[i]+"cal");
-                            break;
-                        case "maindish":
-                            for(int i=0;i<maindish_protein.length;i++)
-                                System.out.println(maindish_protein[i]+" "+maindish_protein_cal[i]+"cal");
-                            break;
-                        case "beverages":
-                            for(int i=0;i<bev.length;i++)
-                                System.out.println(bev[i]+" "+bev_cal[i]+"cal");
-                            break;
-                        case "breakfast":
-                            for(int i=0;i<breakfasts.length;i++)
-                                System.out.println(breakfasts[i]+" "+breakfast_cal[i]+"cal");
-                            break;
-                    }
+                        }
+                    }while(true);
                     break;
                 case "sports":
                     System.out.println("Please note that these calculations are based on average.If you think there's a mistake you can update your weight on 'update info'.");
