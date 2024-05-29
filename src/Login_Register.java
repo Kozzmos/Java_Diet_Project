@@ -49,7 +49,7 @@ public class Login_Register {
                 "(username, password, gender, heigth, weight, goal_w, bmi, pregnancy,cheat_day_timer)values" +
                 "(?, ?, ?, ?, ?, ?, ?, ?, ?)");
             {
-                System.out.print("Enter username:\n");
+                System.out.print("Enter username:");
                 PreparedStatement if_user_exist;
                 if_user_exist = db.connect().prepareStatement("select username from users where username=?");
                 while(true) {
@@ -57,24 +57,24 @@ public class Login_Register {
                     if_user_exist.setString(1, User_Info.username);
                     ResultSet rs1 = if_user_exist.executeQuery();
                     if (rs1.next()) {
-                        System.out.print("Username already exists. Please enter another name:\n");
+                        System.out.println("\nUsername already exists. Please enter another name:");
                     }
                     else{
                         break;
                     }
                 }
-                System.out.print("Enter password:\n");
+                System.out.print("Enter password:");
                 register.setString(2, User_Info.password=Main.sc.next());
-                System.out.print("Enter gender:\n");
+                System.out.print("Enter gender:");
                 do {
                     register.setString(3, User_Info.gender=Main.sc.next());
                     if (!(User_Info.gender.equalsIgnoreCase("male")) && !(User_Info.gender.equals("female"))) {
-                        System.out.println("Please enter a valid gender\n");
+                        System.out.println("Please enter a valid gender");
                     }
                 } while (!(User_Info.gender.equalsIgnoreCase("male")) && !(User_Info.gender.equals("female")));
 
                 if(User_Info.gender.equalsIgnoreCase("female")) {
-                    System.out.print("Are you pregnant? Yes/No\n");
+                    System.out.println("Are you pregnant? Yes/No");
                     if(Main.sc.next().equalsIgnoreCase("yes")) {
                         System.out.println("Congratulations! :)\nKeep in mind that your BMI may not be accurate and instead of focusing on your weight your priority is a healthy diet.");
                         register.setBoolean(8, true);
@@ -82,16 +82,29 @@ public class Login_Register {
                     else {
                         register.setBoolean(8, false);
                     }
-                }
-                System.out.print("Enter height(cm):\n");
+                }else register.setBoolean(8, false);
+
+                System.out.print("Enter height(cm):");
                 register.setFloat(4, User_Info.height=Main.sc.nextFloat());
                 System.out.print("Enter weight(kg):");
                 register.setFloat(5, User_Info.weight=Main.sc.nextFloat());
-                System.out.print("Enter your target weight(kg):\n");
-                register.setFloat(6, User_Info.weight_goal=Main.sc.nextFloat());
+                System.out.printf("Our advice on your ideal weight is %.0f kg.\n", (User_Info.height-110));
                 User_Info.bmi = (User_Info.weight / (((User_Info.height / 100)*(User_Info.height / 100))));
+                int wg;
+                do{
+                    wg=1;
+                    System.out.print("Enter your target weight(kg):");
+                    User_Info.weight_goal=Main.sc.nextFloat();
+                    if(User_Info.weight_goal/((User_Info.height/100)*(User_Info.height/100))< 18.5 || User_Info.weight_goal/((User_Info.height/100)*(User_Info.height/100)) >= 25) {
+                        System.out.println("Your BMI is not at normal references for your weight goal.Please change it.");
+                        wg=0;
+
+                    }
+                }while(wg==0);
+                register.setFloat(6, User_Info.weight_goal);
                 register.setFloat(7,User_Info.bmi);
-                register.setInt(9,1);
+                User_Info.cheatday_counter=0;
+                register.setInt(9,User_Info.cheatday_counter);
                 System.out.println(register);
                 register.executeUpdate();
             }
