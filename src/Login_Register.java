@@ -88,7 +88,7 @@ public class Login_Register {
                 register.setFloat(4, User_Info.height=Main.sc.nextFloat());
                 System.out.print("Enter weight(kg):");
                 register.setFloat(5, User_Info.weight=Main.sc.nextFloat());
-                System.out.printf("Our advice on your ideal weight is %.0f kg.\n", (User_Info.height-110));
+                System.out.printf("Our advice on your ideal weight is %.0f kg.\n", 20*((User_Info.height*User_Info.height)/10000));
                 User_Info.bmi = (User_Info.weight / (((User_Info.height / 100)*(User_Info.height / 100))));
                 int wg;
                 do{
