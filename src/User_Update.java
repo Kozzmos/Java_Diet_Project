@@ -8,7 +8,7 @@ public class User_Update {
         while (true) {
             PreparedStatement update = null;
             System.out.print("Enter what you want to change:\n" +
-                    "username / password / height / weight / weightgoal / pregnancy / exit");
+                    "username / password / height / weight / weightgoal / pregnancy / exit\n");
             String choice = Main.sc.next();
             switch (choice) {
                 case "username":
@@ -31,7 +31,7 @@ public class User_Update {
                     System.out.print("Enter the new height:\n");
                     update = db.connect().prepareStatement("update users set heigth = ?, bmi = ? where username=?");
                     update.setString(3, User_Info.username);
-                    update.setFloat(1, User_Info.height = Main.sc.nextInt());
+                    update.setFloat(1, User_Info.height = Main.sc.nextFloat());
                     update.setFloat(2, User_Info.bmi = (User_Info.weight / (((User_Info.height / 100)) * (User_Info.height / 100))));
                     update.executeUpdate();
                     System.out.print("Height changed successfully:\n");
