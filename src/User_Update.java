@@ -6,10 +6,12 @@ public class User_Update {
         ConnectionDB db = new ConnectionDB();
 
         while (true) {
+            //We are asking which value they want to change
             PreparedStatement update = null;
             System.out.print("Enter what you want to change:\n" +
                     "username / password / height / weight / weightgoal / pregnancy / exit\n");
             String choice = Main.sc.next();
+            //Then according to their choice we are updating the Sql database and User_Info class
             switch (choice) {
                 case "username":
                     System.out.print("Enter the new username:\n");

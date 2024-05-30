@@ -33,3 +33,10 @@ public class Main {
         sc.close();
     }
 }
+
+// CREDITS
+
+// DEVELOPPERS:
+// Akif Eren Ertuğrul
+// Osman Enes Doğaner
+// Dora Albayrak

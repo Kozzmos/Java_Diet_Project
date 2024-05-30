@@ -17,8 +17,10 @@ public class Login_Register {
         User_Info.password = Main.sc.next();
 
         PreparedStatement user_check;
-        //day counter:
+        //day counter: to keep weekly burned calories
         PreparedStatement day_count = db.connect().prepareStatement("update users set day_counter = ?, year = ? where username = ?");
+        PreparedStatement reset_calory = db.connect().prepareStatement("update users set lastweek_calory = 0 where username= ?");
+        reset_calory.setString(1, User_Info.username);
         while(true) {
             if (calendar.get(Calendar.DAY_OF_YEAR) == User_Info.day_counter) {
                 break;
@@ -26,11 +28,13 @@ public class Login_Register {
                 day_count.setInt(1, User_Info.day_counter = calendar.get(Calendar.DAY_OF_YEAR));
                 User_Info.caloriesBurned = (float) 0;
                 day_count.setInt(2, User_Info.year = calendar.get(Calendar.YEAR));
+                reset_calory.executeUpdate();
                 // might add weekly burned calories, and reset it here also checks the date
             } else if (calendar.get(Calendar.YEAR) > User_Info.year) {
                 day_count.setInt(1, User_Info.day_counter = calendar.get(Calendar.DAY_OF_YEAR));
                 User_Info.caloriesBurned = (float) 0;
                 day_count.setInt(2, User_Info.year = calendar.get(Calendar.YEAR));
+                reset_calory.executeUpdate();
             } else{
                 break;
             }
@@ -39,10 +43,10 @@ public class Login_Register {
             day_count.executeUpdate();
             break;
         }
-        //
+        //To check username and password when user tries to login
         user_check = db.connect().prepareStatement("select * from users");
         ResultSet rs = user_check.executeQuery();
-
+        // after user entered we store the important datas of user to User_Info Class
         while (rs.next()) {
             if (rs.getString("username").equals(User_Info.username) && rs.getString("password").equals(User_Info.password)) {
 
@@ -74,6 +78,7 @@ public class Login_Register {
         ConnectionDB db = new ConnectionDB();
         db.connect();
 
+        //For register we take each of these information from user. Then create a profile for him at sql database
         try{PreparedStatement register = db.connect().prepareStatement("INSERT INTO users" +
                 "(username, password, gender, heigth, weight, goal_w, bmi, pregnancy,cheat_day_timer)values" +
                 "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");

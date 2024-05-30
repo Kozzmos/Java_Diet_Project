@@ -1,6 +1,8 @@
 import java.util.Calendar;
 import java.util.Date;
 
+
+// This class is for storing important datas to not repeat pulling information from server again and again.
 public class User_Info {
 
     public static String gender;
@@ -16,4 +18,5 @@ public class User_Info {
     public static int day_counter;
     public static Float caloriesBurned;
     public static int year;
+    public static String diet_list;
 }

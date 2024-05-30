@@ -13,7 +13,7 @@ public class ConnectionDB {
 //Function that establishes connection with DB
     public static Connection connect() {
         try {
-//            System.out.println("Connected to PostgreSQL database");   To check for us
+//           returning the values for connection  To check for us
             return DriverManager.getConnection(DB_URL, USER, PASSWORD);
 
         } catch (SQLException e) {
