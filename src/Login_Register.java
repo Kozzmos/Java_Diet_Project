@@ -1,10 +1,12 @@
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Calendar;
 
 public class Login_Register {
     public static void login() throws SQLException {
 
+        Calendar calendar = Calendar.getInstance();
 //        Establish and test connection to DB
         ConnectionDB db = new ConnectionDB();
         db.connect();
@@ -15,6 +17,29 @@ public class Login_Register {
         User_Info.password = Main.sc.next();
 
         PreparedStatement user_check;
+        //day counter:
+        PreparedStatement day_count = db.connect().prepareStatement("update users set day_counter = ?, year = ? where username = ?");
+        while(true) {
+            if (calendar.get(Calendar.DAY_OF_YEAR) == User_Info.day_counter) {
+                break;
+            } else if (calendar.get(Calendar.DAY_OF_YEAR) > User_Info.day_counter + 6) {
+                day_count.setInt(1, User_Info.day_counter = calendar.get(Calendar.DAY_OF_YEAR));
+                User_Info.caloriesBurned = (float) 0;
+                day_count.setInt(2, User_Info.year = calendar.get(Calendar.YEAR));
+                // might add weekly burned calories, and reset it here also checks the date
+            } else if (calendar.get(Calendar.YEAR) > User_Info.year) {
+                day_count.setInt(1, User_Info.day_counter = calendar.get(Calendar.DAY_OF_YEAR));
+                User_Info.caloriesBurned = (float) 0;
+                day_count.setInt(2, User_Info.year = calendar.get(Calendar.YEAR));
+            } else{
+                break;
+            }
+            User_Info.year = Calendar.YEAR;
+            day_count.setString(3, User_Info.username);
+            day_count.executeUpdate();
+            break;
+        }
+        //
         user_check = db.connect().prepareStatement("select * from users");
         ResultSet rs = user_check.executeQuery();
 
@@ -29,6 +54,8 @@ public class Login_Register {
                 User_Info.pregnancy = rs.getBoolean("pregnancy");
                 User_Info.bmi = rs.getFloat("bmi");
                 User_Info.cheatday_counter=rs.getInt("cheat_day_timer");
+
+
                 break;
             } else {
                 User_Info.login_check = false;
@@ -47,7 +74,7 @@ public class Login_Register {
 
         try{PreparedStatement register = db.connect().prepareStatement("INSERT INTO users" +
                 "(username, password, gender, heigth, weight, goal_w, bmi, pregnancy,cheat_day_timer)values" +
-                "(?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             {
                 System.out.print("Enter username:");
                 PreparedStatement if_user_exist;
@@ -106,6 +133,8 @@ public class Login_Register {
                 User_Info.cheatday_counter=0;
                 register.setInt(9,User_Info.cheatday_counter);
                 System.out.println(register);
+                register.executeUpdate();
+                register.setInt(10, calendar.get(Calendar.DAY_OF_YEAR));
                 register.executeUpdate();
             }
         }
