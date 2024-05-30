@@ -9,4 +9,7 @@ public class User_Info {
     public static Boolean pregnancy;
     public static boolean login_check = false;
     public static Float bmi;
+    public static int day_counter;
+    public static Float caloriesBurned;
+    public static int year;
 }
