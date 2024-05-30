@@ -1,7 +1,3 @@
-Certainly! Here's a README template you can use for your Java Diet Project on GitHub:
-
----
-
 # Java Diet Project
 
 ![Java Diet Project](https://github.com/Kozzmos/Java_Diet_Project/blob/main/cover_image.jpg)
