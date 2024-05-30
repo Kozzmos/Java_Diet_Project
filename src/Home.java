@@ -6,6 +6,7 @@ import java.util.Calendar;
 public class Home {
     public static void home() throws SQLException {
         Calendar calendar = Calendar.getInstance();
+        Sports sports = new Sports();
 
         String[] carbs = {"Baked potato (1 piece-173g)", "Boiled potato (1 portion-200g)", "Mashed potato with milk and butter(1 portion-250g)", "Roasted sweet potato(1 portion-340g)", "Hash brown potato (1 portion-156g)", "Ramen (1 portion)", "Basmati rice (1 portion-50g)", "Black rice (1 portion-50g)", "Rice cake (4 piece-40g)", "White rice (1 portion-50g)", "Egg noodles (1 portion-160g)", "Spaghetti (1 portion-140g)", "Fettuccine (1 portion-80g)"
         ,"French fries (1 portion-80g)","Gnocchi(1 portion-200g)","Instant noodles (1 portion-80g)"};
@@ -97,7 +98,10 @@ public class Home {
                             }
                         }
                     }
-                    break;
+                    System.out.println("Wanna Go Home => Yes");
+                    if(sc1.nextLine().equalsIgnoreCase("yes")) {
+                        break;
+                    }
                 case "updateinfo":
                     User_Update.userupdate();
                     break;
@@ -359,7 +363,7 @@ public class Home {
                                 mealdiet[2] = lowcalside[random_b];
                                 summealcal += lowcalside_cal[random_b];
 
-                                random_b = random.nextInt(4,8);
+                                random_b = random.nextInt(4,7);
                                 mealdiet[3] = bev[random_b];
                                 summealcal += bev_cal[random_b];
 
@@ -409,13 +413,17 @@ public class Home {
                     if (hour >= 20 && User_Info.bmi >= 25) {
                         System.out.println("Don't eat something for 4 hours before bed!");
                     }
+                    System.out.println("Wanna Go Home => Yes");
 
-                    break;
+                    if(sc1.nextLine().equalsIgnoreCase("yes")) {
+                        break;
+                    }
+
                 case "calorielibrary":
                     String answer;
 
                     do {
-                        System.out.println("Which category would you like to see?\nCarbs,Cheat Snacks,Side Meals,Main Dish,Breakfast,Beverages");
+                        System.out.println("Which category would you like to see?\nCarbs,Cheat Snacks,Side Meals,Main Dish,Breakfast,Beverages or EXIT");
                         answer = sc1.nextLine();
                         answer = answer.replaceAll("\\s", "");
                         switch (answer.toLowerCase()) {
@@ -452,7 +460,7 @@ public class Home {
                     break;
                 case "sports":
                     System.out.println("Please note that these calculations are based on average.If you think there's a mistake you can update your weight on 'update info'.");
-
+                    Sports.sports_page();
                     break;
             }
             if(choice_main_page.equalsIgnoreCase("logout")){
