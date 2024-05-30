@@ -53,7 +53,7 @@ The Java Diet Project is a console-based application designed to help users mana
 
 - [@Akif Eren Ertuğrul](https://github.com/Kozzmos) - Project Developer
 - [@Osman Enes Doğaner](https://github.com/Decadence666) - Project Developer
-- [@Dora Albayrak](https://github.com/doralado) - Project Developer
+- [@Dora Bayraktar](https://github.com/doralado) - Project Developer
 
 ---
 
