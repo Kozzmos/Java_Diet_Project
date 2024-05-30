@@ -1,4 +1,8 @@
+import java.util.Calendar;
+import java.util.Date;
+
 public class User_Info {
+
     public static String gender;
     public static Float weight;
     public static Float height;

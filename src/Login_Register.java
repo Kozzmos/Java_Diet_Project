@@ -69,6 +69,8 @@ public class Login_Register {
     }
 
     public static void register() throws SQLException {
+        Calendar calendar = Calendar.getInstance();
+        User_Info.year = Calendar.YEAR;
         ConnectionDB db = new ConnectionDB();
         db.connect();
 
