@@ -1,7 +1,5 @@
 # Java Diet Project
 
-![Java Diet Project](https://github.com/Kozzmos/Java_Diet_Project/blob/main/cover_image.jpg)
-
 ---
 
 ## Overview
