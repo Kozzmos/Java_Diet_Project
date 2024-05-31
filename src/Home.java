@@ -258,7 +258,11 @@ public class Home {
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
 
                                 }
-                                User_Info.cheatday_counter += 1;
+                                PreparedStatement insertcd;
+                                insertcd = db.connect().prepareStatement("update users set cheat_day_timer = ? where username = ?");
+                                insertcd.setInt(1, (User_Info.cheatday_counter+1));
+                                insertcd.setString(2, User_Info.username);
+                                insertcd.executeUpdate();
 
                             }
 
@@ -440,7 +444,11 @@ public class Home {
                                     System.out.println("Sum Meal Calories: " + summealcal);
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                                 }
-                                User_Info.cheatday_counter += 1;
+                                PreparedStatement insertcd;
+                                insertcd = db.connect().prepareStatement("update users set cheat_day_timer = ? where username = ?");
+                                insertcd.setInt(1, (User_Info.cheatday_counter+1));
+                                insertcd.setString(2, User_Info.username);
+                                insertcd.executeUpdate();
                             }
                         } else {
                             //We added a cheat day counter for users
