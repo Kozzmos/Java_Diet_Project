@@ -8,8 +8,13 @@ public class User_Update {
         while (true) {
             //We are asking which value they want to change
             PreparedStatement update = null;
-            System.out.print("Enter what you want to change:\n" +
-                    "username / password / height / weight / weightgoal / pregnancy / exit\n");
+            if(User_Info.gender.equals("male")){
+                System.out.print("Enter what you want to change:\n" +
+                        "username / password / height / weight / weightgoal / exit\n");
+            } else {
+                System.out.print("Enter what you want to change:\n" +
+                        "username / password / height / weight / weightgoal / pregnancy / exit\n");
+            }
             String choice = Main.sc.next();
             //Then according to their choice we are updating the Sql database and User_Info class
             switch (choice) {
@@ -59,6 +64,9 @@ public class User_Update {
 
                     break;
                 case "pregnancy":
+                    if(User_Info.gender.equals("male")){
+                        break;
+                    }
                     System.out.print("Are you pregnant true/false:\n");
                     update = db.connect().prepareStatement("update users set pregnancy = ? where username=?");
                     update.setString(2, User_Info.username);

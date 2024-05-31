@@ -8,10 +8,10 @@ public class Main {
         ConnectionDB db = new ConnectionDB();
         db.connect();
         while(true) {
-            System.out.printf("========Welcome========\n" +
-                    "Login\t\t=======> Login\n" +
-                    "Register\t=======> Register\n" +
-                    "Exit\t\t=======> Exit\n");
+            System.out.printf("========Welcome========\n" +"Please type what would you like to do.\n"+
+                    "Login\n" +
+                    "Register\n" +
+                    "Exit\n");
             String choice = sc.next();
             switch(choice.toLowerCase()){
                 case "login":

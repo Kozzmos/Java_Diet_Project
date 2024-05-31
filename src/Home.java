@@ -109,12 +109,12 @@ public class Home {
                             }
                         }
                     }
-                    System.out.println("Wanna Go Home => Yes");
-                    if(sc1.nextLine().equalsIgnoreCase("yes")) {
+                    System.out.println("Type anything to go home page.");
+                    if(sc1.hasNext()) {
                         break;
                     }
                 case "updateinfo":
-                    //This allows to user change his/her informations
+                    //This allows user to change his/her informations
                     User_Update.userupdate();
                     break;
                 case "mydiet":
@@ -125,12 +125,27 @@ public class Home {
                     ResultSet rs = if_diet_list_exist.executeQuery();
                     rs.next();
                     User_Info.diet_list=rs.getString("diet_list");
-                    if (rs.getString("diet_list") == null) {
+                    if(rs.getString("diet_list") != null){
+                        System.out.println("Your current diet list:"+User_Info.diet_list);
+                    }
+                    if(rs.getString("diet_list") != null) {
+                        System.out.println("Would you like to get a new diet?(Yes/No)");
+                        if (sc1.nextLine().equalsIgnoreCase("yes")) {
+                            PreparedStatement update_diet_list_exist = db.connect().prepareStatement("update users set diet_list = null where username = ?");
+                            update_diet_list_exist.setString(1, User_Info.username);
+                            update_diet_list_exist.executeUpdate();
+                        }
+                    }
+                    ResultSet rs1 = if_diet_list_exist.executeQuery();
+                    rs1.next();
+
+                    if (rs1.getString("diet_list") == null) {
                         if (User_Info.cheatday_counter != 93) {
                             if (hour < 11) { //this part is for breakfast
                                 int random_b;
                                 int sumbreakfastcal;
                                 Random random = new Random();
+
 
                                 if (User_Info.bmi < 18.5 && User_Info.gender.equals("female")) {
                                     do {
@@ -162,7 +177,7 @@ public class Home {
 
                                 }
 
-                                if (User_Info.bmi < 18.5 && User_Info.gender.equals("male")) {
+                                else if (User_Info.bmi < 18.5 && User_Info.gender.equals("male")) {
                                     do {
                                         sumbreakfastcal = 0;
                                         random_b = random.nextInt(0, 6);
@@ -188,7 +203,7 @@ public class Home {
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
 
                                 }
-                                if (User_Info.bmi >= 25 && User_Info.gender.equals("female")) {
+                                else if (User_Info.bmi >= 18.5 && User_Info.gender.equals("female")) {
                                     do {
                                         sumbreakfastcal = 0;
                                         random_b = random.nextInt(0, 6);
@@ -216,7 +231,7 @@ public class Home {
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                                 }
 
-                                if (User_Info.bmi >= 25 && User_Info.gender.equals("male")) {
+                                else if (User_Info.bmi >= 18.5 && User_Info.gender.equals("male")) {
                                     do {
 
                                         sumbreakfastcal = 0;
@@ -247,7 +262,7 @@ public class Home {
 
                             }
 
-                            if (hour >= 11) { //this part is for lunch
+                            else if (hour >= 11) { //this part is for lunch
                                 int random_b;
                                 int summealcal;
 
@@ -282,7 +297,7 @@ public class Home {
                                     System.out.println("Sum Meal Calories: " + summealcal);
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                                 }
-                                if (User_Info.bmi < 18.5 && User_Info.gender.equals("male")) {
+                                else if (User_Info.bmi < 18.5 && User_Info.gender.equals("male")) {
                                     do {
 
                                         summealcal = 0;
@@ -311,7 +326,7 @@ public class Home {
                                     System.out.println("Sum Meal Calories: " + summealcal);
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                                 }
-                                if (User_Info.bmi <= 18.5 && User_Info.gender.equals("female") && User_Info.bmi < 25) {
+                                else if (User_Info.bmi <= 18.5 && User_Info.gender.equals("female") && User_Info.bmi < 25) {
                                     do {
                                         summealcal = 0;
 
@@ -339,7 +354,7 @@ public class Home {
                                     System.out.println("Sum Meal Calories: " + summealcal);
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                                 }
-                                if (User_Info.bmi <= 18.5 && User_Info.gender.equals("male") && User_Info.bmi < 25) {
+                                else if (User_Info.bmi <= 18.5 && User_Info.gender.equals("male") && User_Info.bmi < 25) {
                                     do {
                                         summealcal = 0;
 
@@ -368,7 +383,7 @@ public class Home {
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                                 }
 
-                                if (User_Info.bmi >= 25 && User_Info.gender.equals("female")) {
+                                else if (User_Info.bmi >= 18.5 && User_Info.gender.equals("female")) {
                                     do {
                                         summealcal = 0;
 
@@ -397,7 +412,7 @@ public class Home {
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                                 }
 
-                                if (User_Info.bmi >= 25 && User_Info.gender.equals("male")) {
+                                else if (User_Info.bmi >= 18.5 && User_Info.gender.equals("male")) {
                                     do {
                                         summealcal = 0;
 
@@ -431,7 +446,7 @@ public class Home {
                             //We added a cheat day counter for users
                             System.out.println("Congrats!You've been determined through 31 days and we owe you a CHEAT DAY!You can eat whatever you want today.\n");
 
-                        if (hour >= 20 && User_Info.bmi >= 25) {
+                        if (hour >= 20 && User_Info.bmi >= 18.5) {
                             System.out.println("Don't eat something for 4 hours before bed!");
                         }
 
@@ -442,13 +457,11 @@ public class Home {
                         insertbf.setString(1, User_Info.diet_list = final_string);
                         insertbf.setString(2, User_Info.username);
                         insertbf.executeUpdate();
-                    } else {
-                        //If a diet list already exist system just shows his list not creating a new list
-                        System.out.println(User_Info.diet_list);
                     }
-                    System.out.println("Wanna Go Home => Yes");
 
-                    if (sc1.nextLine().equalsIgnoreCase("yes")) {
+                    System.out.println("Type anything to go home.");
+
+                    if (sc1.hasNext()) {
                         break;
                     }
                     break;

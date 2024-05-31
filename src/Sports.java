@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Locale;
 import java.util.Scanner;
 import java.sql.PreparedStatement;
 
@@ -14,7 +15,7 @@ public class Sports {
         String[] sports = {"Running", "Walking", "Swimming", "Cycling", "Yoga", "Weightlifting"};
         //Giving information to user and asking the user for input
         System.out.print("Welcome to Sports Page " + User_Info.username + "! You burned " + User_Info.caloriesBurned +
-                " calories this week.\n" + "\nWhat would you like to do?" + "\n->Add an Activity    (1)\n->Go Home     (2)\n");
+                " calories this week.\n" + "\nWhat would you like to do?" + "\n->Add an Activity\t\t(1)\n->Go Home\t\t\t\t(2)\n");
         //getting the choice from user
         int choice = sc.nextInt();
         //temp for keeping the temporary calories to add it into weekly calories column on the data base
