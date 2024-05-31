@@ -15,7 +15,7 @@ public class Home {
         //Dummy Food List
 
         String[] carbs = {"Baked potato (1 piece-173g)", "Boiled potato (1 portion-200g)", "Mashed potato with milk and butter(1 portion-250g)", "Roasted sweet potato(1 portion-340g)", "Hash brown potato (1 portion-156g)", "Ramen (1 portion)", "Basmati rice (1 portion-50g)", "Black rice (1 portion-50g)", "Rice cake (4 piece-40g)", "White rice (1 portion-50g)", "Egg noodles (1 portion-160g)", "Spaghetti (1 portion-140g)", "Fettuccine (1 portion-80g)"
-        ,"French fries (1 portion-80g)","Gnocchi(1 portion-200g)","Instant noodles (1 portion-80g)"};
+                ,"French fries (1 portion-80g)","Gnocchi(1 portion-200g)","Instant noodles (1 portion-80g)"};
         int[] carbs_cal = {212, 177, 184, 381, 196, 432, 176, 181, 156, 257, 221, 221, 283, 196, 250, 188};
 
         String[] breakfast = {"Avocado toast (1 portion-76g)", "Boiled egg (2 large piece-100g)", "Egg omlette (122g)", "Egg,sunny side up (2 piece-100g)", "Eggy bread(1 slice-65g)", "Poached egg (2 piece-100g)", "Granola (1 portion-30g)", "Curd cheese (1 portion-50g)", "Labneh (1 portion-28g)", "Sausage (1 piece-41g)", "Turkey salami (112g)", "Peanut butter(30g)", "Oat meal (100g)", "Oat meal with 1 banana (170g)"};
@@ -72,38 +72,38 @@ public class Home {
                             } else if (User_Info.bmi == 20) {
                                 //easter egg (if you have the BMI value of exactly 20)
                                 System.out.print("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣶⡀⠀⠀⣴⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣶⣶⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⢀⡄⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣶⣶⣶⣾⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢻⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣴⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣴⣶⣿⣿⡿⠿⠟⠛⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠻⠿⢿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⡇⠀⠀⣀⣤⣶⣿⣿⡿⠿⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⢿⣿⣷⣦⡀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣧⣴⣿⡿⠿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠈⠙⢻⣿⣧⡀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⡿⠇⠀⠀⠀⠀⠙⣿⣷⡀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⠟⢻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⡧⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⡟⠁⠀⠸⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⣀⣀⣀⣀⣤⣤⣴⣾⡿⠃⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⡟⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⣀⣄⣠⣤⣤⣴⣶⣾⣿⣶⣾⣿⣿⣿⣿⡿⠿⠿⠿⠿⠟⠛⠛⠁⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⠀⣾⣿⠏⠀⠀⠀⠀⠀⣸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⠿⠿⠿⠿⠿⠿⠿⠿⠟⠻⣛⣟⣿⣿⡍⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⠀⣼⣿⠏⠀⠀⠀⠀⠀⠀⢸⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠹⢆⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⠀⣼⣿⡟⠀⠀⠀⠀⠀⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠓⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⠀⣼⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠿⣿⣦⣤⣤⣄⣀⣀⣀⣠⣤⠜⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⢀⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⢰⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⣼⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠀⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⢸⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⣾⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢼⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⢀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⢸⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⢿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
-                                                "⠀⠙⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"+"\nWOW you are so healthy with BMI value of EXACTLY 20! How is this even possible?\n");
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣶⣶⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⢀⡄⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣶⣶⣶⣾⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢻⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣴⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣴⣶⣿⣿⡿⠿⠟⠛⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠻⠿⢿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⡇⠀⠀⣀⣤⣶⣿⣿⡿⠿⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⢿⣿⣷⣦⡀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣧⣴⣿⡿⠿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠈⠙⢻⣿⣧⡀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⡿⠇⠀⠀⠀⠀⠙⣿⣷⡀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⠟⢻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⡧⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⡟⠁⠀⠸⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⣀⣀⣀⣀⣤⣤⣴⣾⡿⠃⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⡟⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⣀⣄⣠⣤⣤⣴⣶⣾⣿⣶⣾⣿⣿⣿⣿⡿⠿⠿⠿⠿⠟⠛⠛⠁⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⠀⣾⣿⠏⠀⠀⠀⠀⠀⣸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⠿⠿⠿⠿⠿⠿⠿⠿⠟⠻⣛⣟⣿⣿⡍⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⠀⣼⣿⠏⠀⠀⠀⠀⠀⠀⢸⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠹⢆⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⠀⣼⣿⡟⠀⠀⠀⠀⠀⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠓⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⠀⣼⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠿⣿⣦⣤⣤⣄⣀⣀⣀⣠⣤⠜⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⢀⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⢰⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⣼⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠀⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⢸⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⣾⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢼⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⢀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⢸⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⢿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                                        "⠀⠙⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"+"\nWOW you are so healthy with BMI value of EXACTLY 20! How is this even possible?\n");
                             } else if (User_Info.bmi < 25) {
                                 System.out.print("You are healthy with BMI value of"+User_Info.bmi+". Keep being healthy!\n");
                             }
@@ -125,327 +125,327 @@ public class Home {
                     ResultSet rs = if_diet_list_exist.executeQuery();
                     rs.next();
                     User_Info.diet_list=rs.getString("diet_list");
-                        if (rs.getString("diet_list") == null) {
-                            if (User_Info.cheatday_counter != 93) {
-                                if (hour < 11) { //this part is for breakfast
-                                    int random_b;
-                                    int sumbreakfastcal;
-                                    Random random = new Random();
+                    if (rs.getString("diet_list") == null) {
+                        if (User_Info.cheatday_counter != 93) {
+                            if (hour < 11) { //this part is for breakfast
+                                int random_b;
+                                int sumbreakfastcal;
+                                Random random = new Random();
 
-                                    if (User_Info.bmi < 18.5 && User_Info.gender.equals("female")) {
-                                        do {
-                                            sumbreakfastcal = 0;
-                                            random_b = random.nextInt(0, 6);
-                                            diet[0] = breakfast[random_b];
-                                            sumbreakfastcal += breakfast_calories[random_b];
+                                if (User_Info.bmi < 18.5 && User_Info.gender.equals("female")) {
+                                    do {
+                                        sumbreakfastcal = 0;
+                                        random_b = random.nextInt(0, 6);
+                                        diet[0] = breakfast[random_b];
+                                        sumbreakfastcal += breakfast_calories[random_b];
 
-                                            random_b = random.nextInt(6, 14);
-                                            diet[1] = breakfast[random_b];
-                                            sumbreakfastcal += breakfast_calories[random_b];
+                                        random_b = random.nextInt(6, 14);
+                                        diet[1] = breakfast[random_b];
+                                        sumbreakfastcal += breakfast_calories[random_b];
 
-                                            random_b = random.nextInt(0, 2);
-                                            diet[2] = lowcalside[random_b];
-                                            sumbreakfastcal += lowcalside_cal[random_b];
+                                        random_b = random.nextInt(0, 2);
+                                        diet[2] = lowcalside[random_b];
+                                        sumbreakfastcal += lowcalside_cal[random_b];
 
-                                            random_b = random.nextInt(0, 4);
-                                            diet[3] = bev[random_b];
-                                            sumbreakfastcal += bev_cal[random_b];
+                                        random_b = random.nextInt(0, 4);
+                                        diet[3] = bev[random_b];
+                                        sumbreakfastcal += bev_cal[random_b];
 
-                                        } while (sumbreakfastcal > 600 || sumbreakfastcal < 500);
+                                    } while (sumbreakfastcal > 600 || sumbreakfastcal < 500);
 
-                                        for (int a = 0; a < 4; a++) {
-                                            System.out.print(diet[a] + "\n");
-                                        }
-
-                                        System.out.println("Sum Breakfast Calories: " + sumbreakfastcal);
-                                        System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
-
+                                    for (int a = 0; a < 4; a++) {
+                                        System.out.print(diet[a] + "\n");
                                     }
 
-                                    if (User_Info.bmi < 18.5 && User_Info.gender.equals("male")) {
-                                        do {
-                                            sumbreakfastcal = 0;
-                                            random_b = random.nextInt(0, 6);
-                                            diet[0] = breakfast[random_b];
-                                            sumbreakfastcal += breakfast_calories[random_b];
-
-                                            random_b = random.nextInt(6, 14);
-                                            diet[1] = breakfast[random_b];
-                                            sumbreakfastcal += breakfast_calories[random_b];
-
-                                            random_b = random.nextInt(0, 2);
-                                            diet[2] = lowcalside[random_b];
-                                            sumbreakfastcal += lowcalside_cal[random_b];
-
-                                            random_b = random.nextInt(0, 4);
-                                            diet[3] = bev[random_b];
-                                            sumbreakfastcal += bev_cal[random_b];
-                                        } while (sumbreakfastcal < 600);
-                                        for (int a = 0; a < 4; a++) {
-                                            System.out.print(diet[a] + "\n");
-                                        }
-                                        System.out.println("Sum Breakfast Calories: " + sumbreakfastcal);
-                                        System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
-
-                                    }
-                                    if (User_Info.bmi >= 25 && User_Info.gender.equals("female")) {
-                                        do {
-                                            sumbreakfastcal = 0;
-                                            random_b = random.nextInt(0, 6);
-                                            diet[0] = breakfast[random_b];
-                                            sumbreakfastcal += breakfast_calories[random_b];
-
-                                            random_b = random.nextInt(6, 14);
-                                            diet[1] = breakfast[random_b];
-                                            sumbreakfastcal += breakfast_calories[random_b];
-
-                                            random_b = random.nextInt(0, 2);
-                                            diet[2] = lowcalside[random_b];
-                                            sumbreakfastcal += lowcalside_cal[random_b];
-
-                                            random_b = random.nextInt(0, 4);
-                                            diet[3] = bev[random_b];
-                                            sumbreakfastcal += bev_cal[random_b];
-
-                                        } while (sumbreakfastcal > 500 || sumbreakfastcal < 400);
-
-                                        for (int a = 0; a < 4; a++) {
-                                            System.out.print(diet[a] + "\n");
-                                        }
-                                        System.out.println("Sum Breakfast Calories: " + sumbreakfastcal);
-                                        System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
-                                    }
-
-                                    if (User_Info.bmi >= 25 && User_Info.gender.equals("male")) {
-                                        do {
-
-                                            sumbreakfastcal = 0;
-                                            random_b = random.nextInt(0, 6);
-                                            diet[0] = breakfast[random_b];
-                                            sumbreakfastcal += breakfast_calories[random_b];
-
-                                            random_b = random.nextInt(6, 14);
-                                            diet[1] = breakfast[random_b];
-                                            sumbreakfastcal += breakfast_calories[random_b];
-
-                                            random_b = random.nextInt(0, 2);
-                                            diet[2] = lowcalside[random_b];
-                                            sumbreakfastcal += lowcalside_cal[random_b];
-
-                                            random_b = random.nextInt(0, 4);
-                                            diet[3] = bev[random_b];
-                                            sumbreakfastcal += bev_cal[random_b];
-                                        } while (sumbreakfastcal > 600 || sumbreakfastcal < 500);
-                                        for (int a = 0; a < 4; a++) {
-                                            System.out.print(diet[a] + "\n");
-                                        }
-                                        System.out.println("Sum Breakfast Calories: " + sumbreakfastcal);
-                                        System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
-
-                                    }
-                                    User_Info.cheatday_counter += 1;
+                                    System.out.println("Sum Breakfast Calories: " + sumbreakfastcal);
+                                    System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
 
                                 }
 
-                                if (hour >= 11) { //this part is for lunch
-                                    int random_b;
-                                    int summealcal;
+                                if (User_Info.bmi < 18.5 && User_Info.gender.equals("male")) {
+                                    do {
+                                        sumbreakfastcal = 0;
+                                        random_b = random.nextInt(0, 6);
+                                        diet[0] = breakfast[random_b];
+                                        sumbreakfastcal += breakfast_calories[random_b];
 
-                                    Random random = new Random();
+                                        random_b = random.nextInt(6, 14);
+                                        diet[1] = breakfast[random_b];
+                                        sumbreakfastcal += breakfast_calories[random_b];
 
-                                    if (User_Info.bmi < 18.5 && User_Info.gender.equals("female")) {
-                                        do {
+                                        random_b = random.nextInt(0, 2);
+                                        diet[2] = lowcalside[random_b];
+                                        sumbreakfastcal += lowcalside_cal[random_b];
 
-                                            summealcal = 0;
-
-                                            random_b = random.nextInt(0, 19);
-                                            diet[0] = maindishes_protein[random_b];
-                                            summealcal += maindishes_protein_cal[random_b];
-
-                                            random_b = random.nextInt(0, 13);
-                                            diet[1] = carbs[random_b];
-                                            summealcal += carbs_cal[random_b];
-
-                                            random_b = random.nextInt(2, 12);
-                                            diet[2] = lowcalside[random_b];
-                                            summealcal += lowcalside_cal[random_b];
-
-                                            random_b = random.nextInt(4, 8);
-                                            diet[3] = bev[random_b];
-                                            summealcal += bev_cal[random_b];
-
-                                        } while (summealcal > 800 || summealcal < 700);
-
-                                        for (int a = 0; a < 4; a++) {
-                                            System.out.print(diet[a] + "\n");
-                                        }
-                                        System.out.println("Sum Meal Calories: " + summealcal);
-                                        System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
+                                        random_b = random.nextInt(0, 4);
+                                        diet[3] = bev[random_b];
+                                        sumbreakfastcal += bev_cal[random_b];
+                                    } while (sumbreakfastcal < 600);
+                                    for (int a = 0; a < 4; a++) {
+                                        System.out.print(diet[a] + "\n");
                                     }
-                                    if (User_Info.bmi < 18.5 && User_Info.gender.equals("male")) {
-                                        do {
+                                    System.out.println("Sum Breakfast Calories: " + sumbreakfastcal);
+                                    System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
 
-                                            summealcal = 0;
-
-                                            random_b = random.nextInt(0, 19);
-                                            diet[0] = maindishes_protein[random_b];
-                                            summealcal += maindishes_protein_cal[random_b];
-
-                                            random_b = random.nextInt(0, 13);
-                                            diet[1] = carbs[random_b];
-                                            summealcal += carbs_cal[random_b];
-
-                                            random_b = random.nextInt(2, 12);
-                                            diet[2] = lowcalside[random_b];
-                                            summealcal += lowcalside_cal[random_b];
-
-                                            random_b = random.nextInt(4, 8);
-                                            diet[3] = bev[random_b];
-                                            summealcal += bev_cal[random_b];
-
-                                        } while (summealcal > 900 || summealcal < 800);
-
-                                        for (int a = 0; a < 4; a++) {
-                                            System.out.print(diet[a] + "\n");
-                                        }
-                                        System.out.println("Sum Meal Calories: " + summealcal);
-                                        System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
-                                    }
-                                    if (User_Info.bmi <= 18.5 && User_Info.gender.equals("female") && User_Info.bmi < 25) {
-                                        do {
-                                            summealcal = 0;
-
-                                            random_b = random.nextInt(0, 19);
-                                            diet[0] = maindishes_protein[random_b];
-                                            summealcal += maindishes_protein_cal[random_b];
-
-                                            random_b = random.nextInt(0, 13);
-                                            diet[1] = carbs[random_b];
-                                            summealcal += carbs_cal[random_b];
-
-                                            random_b = random.nextInt(2, 12);
-                                            diet[2] = lowcalside[random_b];
-                                            summealcal += lowcalside_cal[random_b];
-
-                                            random_b = random.nextInt(4, 8);
-                                            diet[3] = bev[random_b];
-                                            summealcal += bev_cal[random_b];
-
-                                        } while (summealcal > 700 || summealcal < 600);
-
-                                        for (int a = 0; a < 4; a++) {
-                                            System.out.print(diet[a] + "\n");
-                                        }
-                                        System.out.println("Sum Meal Calories: " + summealcal);
-                                        System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
-                                    }
-                                    if (User_Info.bmi <= 18.5 && User_Info.gender.equals("male") && User_Info.bmi < 25) {
-                                        do {
-                                            summealcal = 0;
-
-                                            random_b = random.nextInt(0, 19);
-                                            diet[0] = maindishes_protein[random_b];
-                                            summealcal += maindishes_protein_cal[random_b];
-
-                                            random_b = random.nextInt(0, 13);
-                                            diet[1] = carbs[random_b];
-                                            summealcal += carbs_cal[random_b];
-
-                                            random_b = random.nextInt(2, 12);
-                                            diet[2] = lowcalside[random_b];
-                                            summealcal += lowcalside_cal[random_b];
-
-                                            random_b = random.nextInt(4, 8);
-                                            diet[3] = bev[random_b];
-                                            summealcal += bev_cal[random_b];
-
-                                        } while (summealcal > 850 || summealcal < 750);
-
-                                        for (int a = 0; a < 4; a++) {
-                                            System.out.print(diet[a] + "\n");
-                                        }
-                                        System.out.println("Sum Meal Calories: " + summealcal);
-                                        System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
-                                    }
-
-                                    if (User_Info.bmi >= 25 && User_Info.gender.equals("female")) {
-                                        do {
-                                            summealcal = 0;
-
-                                            random_b = random.nextInt(0, 19);
-                                            diet[0] = maindishes_protein[random_b];
-                                            summealcal += maindishes_protein_cal[random_b];
-
-                                            random_b = random.nextInt(0, 13);
-                                            diet[1] = carbs[random_b];
-                                            summealcal += carbs_cal[random_b];
-
-                                            random_b = random.nextInt(2, 12);
-                                            diet[2] = lowcalside[random_b];
-                                            summealcal += lowcalside_cal[random_b];
-
-                                            random_b = random.nextInt(4, 7);
-                                            diet[3] = bev[random_b];
-                                            summealcal += bev_cal[random_b];
-
-                                        } while (summealcal > 600 || summealcal < 500);
-
-                                        for (int a = 0; a < 4; a++) {
-                                            System.out.print(diet[a] + "\n");
-                                        }
-                                        System.out.println("Sum Meal Calories: " + summealcal);
-                                        System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
-                                    }
-
-                                    if (User_Info.bmi >= 25 && User_Info.gender.equals("male")) {
-                                        do {
-                                            summealcal = 0;
-
-                                            random_b = random.nextInt(0, 19);
-                                            diet[0] = maindishes_protein[random_b];
-                                            summealcal += maindishes_protein_cal[random_b];
-
-                                            random_b = random.nextInt(0, 13);
-                                            diet[1] = carbs[random_b];
-                                            summealcal += carbs_cal[random_b];
-
-                                            random_b = random.nextInt(2, 12);
-                                            diet[2] = lowcalside[random_b];
-                                            summealcal += lowcalside_cal[random_b];
-
-                                            random_b = random.nextInt(4, 8);
-                                            diet[3] = bev[random_b];
-                                            summealcal += bev_cal[random_b];
-
-                                        } while (summealcal > 700 || summealcal < 600);
-
-                                        for (int a = 0; a < 4; a++) {
-                                            System.out.print(diet[a] + "\n");
-                                        }
-                                        System.out.println("Sum Meal Calories: " + summealcal);
-                                        System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
-                                    }
-                                    User_Info.cheatday_counter += 1;
                                 }
-                            } else
-                                //We added a cheat day counter for users
-                                System.out.println("Congrats!You've been determined through 31 days and we owe you a CHEAT DAY!You can eat whatever you want today.\n");
+                                if (User_Info.bmi >= 25 && User_Info.gender.equals("female")) {
+                                    do {
+                                        sumbreakfastcal = 0;
+                                        random_b = random.nextInt(0, 6);
+                                        diet[0] = breakfast[random_b];
+                                        sumbreakfastcal += breakfast_calories[random_b];
 
-                            if (hour >= 20 && User_Info.bmi >= 25) {
-                                System.out.println("Don't eat something for 4 hours before bed!");
+                                        random_b = random.nextInt(6, 14);
+                                        diet[1] = breakfast[random_b];
+                                        sumbreakfastcal += breakfast_calories[random_b];
+
+                                        random_b = random.nextInt(0, 2);
+                                        diet[2] = lowcalside[random_b];
+                                        sumbreakfastcal += lowcalside_cal[random_b];
+
+                                        random_b = random.nextInt(0, 4);
+                                        diet[3] = bev[random_b];
+                                        sumbreakfastcal += bev_cal[random_b];
+
+                                    } while (sumbreakfastcal > 500 || sumbreakfastcal < 400);
+
+                                    for (int a = 0; a < 4; a++) {
+                                        System.out.print(diet[a] + "\n");
+                                    }
+                                    System.out.println("Sum Breakfast Calories: " + sumbreakfastcal);
+                                    System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
+                                }
+
+                                if (User_Info.bmi >= 25 && User_Info.gender.equals("male")) {
+                                    do {
+
+                                        sumbreakfastcal = 0;
+                                        random_b = random.nextInt(0, 6);
+                                        diet[0] = breakfast[random_b];
+                                        sumbreakfastcal += breakfast_calories[random_b];
+
+                                        random_b = random.nextInt(6, 14);
+                                        diet[1] = breakfast[random_b];
+                                        sumbreakfastcal += breakfast_calories[random_b];
+
+                                        random_b = random.nextInt(0, 2);
+                                        diet[2] = lowcalside[random_b];
+                                        sumbreakfastcal += lowcalside_cal[random_b];
+
+                                        random_b = random.nextInt(0, 4);
+                                        diet[3] = bev[random_b];
+                                        sumbreakfastcal += bev_cal[random_b];
+                                    } while (sumbreakfastcal > 600 || sumbreakfastcal < 500);
+                                    for (int a = 0; a < 4; a++) {
+                                        System.out.print(diet[a] + "\n");
+                                    }
+                                    System.out.println("Sum Breakfast Calories: " + sumbreakfastcal);
+                                    System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
+
+                                }
+                                User_Info.cheatday_counter += 1;
+
                             }
 
-                            //We store the diet list for user to make them able to see whenever they want
-                            String final_string = Arrays.toString(diet);
-                            PreparedStatement insertbf;
-                            insertbf = db.connect().prepareStatement("update users set diet_list = ? where username = ?");
-                            insertbf.setString(1, User_Info.diet_list = final_string);
-                            insertbf.setString(2, User_Info.username);
-                            insertbf.executeUpdate();
-                        } else {
-                            //If a diet list already exist system just shows his list not creating a new list
-                            System.out.println(User_Info.diet_list);
+                            if (hour >= 11) { //this part is for lunch
+                                int random_b;
+                                int summealcal;
+
+                                Random random = new Random();
+
+                                if (User_Info.bmi < 18.5 && User_Info.gender.equals("female")) {
+                                    do {
+
+                                        summealcal = 0;
+
+                                        random_b = random.nextInt(0, 19);
+                                        diet[0] = maindishes_protein[random_b];
+                                        summealcal += maindishes_protein_cal[random_b];
+
+                                        random_b = random.nextInt(0, 13);
+                                        diet[1] = carbs[random_b];
+                                        summealcal += carbs_cal[random_b];
+
+                                        random_b = random.nextInt(2, 12);
+                                        diet[2] = lowcalside[random_b];
+                                        summealcal += lowcalside_cal[random_b];
+
+                                        random_b = random.nextInt(4, 8);
+                                        diet[3] = bev[random_b];
+                                        summealcal += bev_cal[random_b];
+
+                                    } while (summealcal > 800 || summealcal < 700);
+
+                                    for (int a = 0; a < 4; a++) {
+                                        System.out.print(diet[a] + "\n");
+                                    }
+                                    System.out.println("Sum Meal Calories: " + summealcal);
+                                    System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
+                                }
+                                if (User_Info.bmi < 18.5 && User_Info.gender.equals("male")) {
+                                    do {
+
+                                        summealcal = 0;
+
+                                        random_b = random.nextInt(0, 19);
+                                        diet[0] = maindishes_protein[random_b];
+                                        summealcal += maindishes_protein_cal[random_b];
+
+                                        random_b = random.nextInt(0, 13);
+                                        diet[1] = carbs[random_b];
+                                        summealcal += carbs_cal[random_b];
+
+                                        random_b = random.nextInt(2, 12);
+                                        diet[2] = lowcalside[random_b];
+                                        summealcal += lowcalside_cal[random_b];
+
+                                        random_b = random.nextInt(4, 8);
+                                        diet[3] = bev[random_b];
+                                        summealcal += bev_cal[random_b];
+
+                                    } while (summealcal > 900 || summealcal < 800);
+
+                                    for (int a = 0; a < 4; a++) {
+                                        System.out.print(diet[a] + "\n");
+                                    }
+                                    System.out.println("Sum Meal Calories: " + summealcal);
+                                    System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
+                                }
+                                if (User_Info.bmi <= 18.5 && User_Info.gender.equals("female") && User_Info.bmi < 25) {
+                                    do {
+                                        summealcal = 0;
+
+                                        random_b = random.nextInt(0, 19);
+                                        diet[0] = maindishes_protein[random_b];
+                                        summealcal += maindishes_protein_cal[random_b];
+
+                                        random_b = random.nextInt(0, 13);
+                                        diet[1] = carbs[random_b];
+                                        summealcal += carbs_cal[random_b];
+
+                                        random_b = random.nextInt(2, 12);
+                                        diet[2] = lowcalside[random_b];
+                                        summealcal += lowcalside_cal[random_b];
+
+                                        random_b = random.nextInt(4, 8);
+                                        diet[3] = bev[random_b];
+                                        summealcal += bev_cal[random_b];
+
+                                    } while (summealcal > 700 || summealcal < 600);
+
+                                    for (int a = 0; a < 4; a++) {
+                                        System.out.print(diet[a] + "\n");
+                                    }
+                                    System.out.println("Sum Meal Calories: " + summealcal);
+                                    System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
+                                }
+                                if (User_Info.bmi <= 18.5 && User_Info.gender.equals("male") && User_Info.bmi < 25) {
+                                    do {
+                                        summealcal = 0;
+
+                                        random_b = random.nextInt(0, 19);
+                                        diet[0] = maindishes_protein[random_b];
+                                        summealcal += maindishes_protein_cal[random_b];
+
+                                        random_b = random.nextInt(0, 13);
+                                        diet[1] = carbs[random_b];
+                                        summealcal += carbs_cal[random_b];
+
+                                        random_b = random.nextInt(2, 12);
+                                        diet[2] = lowcalside[random_b];
+                                        summealcal += lowcalside_cal[random_b];
+
+                                        random_b = random.nextInt(4, 8);
+                                        diet[3] = bev[random_b];
+                                        summealcal += bev_cal[random_b];
+
+                                    } while (summealcal > 850 || summealcal < 750);
+
+                                    for (int a = 0; a < 4; a++) {
+                                        System.out.print(diet[a] + "\n");
+                                    }
+                                    System.out.println("Sum Meal Calories: " + summealcal);
+                                    System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
+                                }
+
+                                if (User_Info.bmi >= 25 && User_Info.gender.equals("female")) {
+                                    do {
+                                        summealcal = 0;
+
+                                        random_b = random.nextInt(0, 19);
+                                        diet[0] = maindishes_protein[random_b];
+                                        summealcal += maindishes_protein_cal[random_b];
+
+                                        random_b = random.nextInt(0, 13);
+                                        diet[1] = carbs[random_b];
+                                        summealcal += carbs_cal[random_b];
+
+                                        random_b = random.nextInt(2, 12);
+                                        diet[2] = lowcalside[random_b];
+                                        summealcal += lowcalside_cal[random_b];
+
+                                        random_b = random.nextInt(4, 7);
+                                        diet[3] = bev[random_b];
+                                        summealcal += bev_cal[random_b];
+
+                                    } while (summealcal > 600 || summealcal < 500);
+
+                                    for (int a = 0; a < 4; a++) {
+                                        System.out.print(diet[a] + "\n");
+                                    }
+                                    System.out.println("Sum Meal Calories: " + summealcal);
+                                    System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
+                                }
+
+                                if (User_Info.bmi >= 25 && User_Info.gender.equals("male")) {
+                                    do {
+                                        summealcal = 0;
+
+                                        random_b = random.nextInt(0, 19);
+                                        diet[0] = maindishes_protein[random_b];
+                                        summealcal += maindishes_protein_cal[random_b];
+
+                                        random_b = random.nextInt(0, 13);
+                                        diet[1] = carbs[random_b];
+                                        summealcal += carbs_cal[random_b];
+
+                                        random_b = random.nextInt(2, 12);
+                                        diet[2] = lowcalside[random_b];
+                                        summealcal += lowcalside_cal[random_b];
+
+                                        random_b = random.nextInt(4, 8);
+                                        diet[3] = bev[random_b];
+                                        summealcal += bev_cal[random_b];
+
+                                    } while (summealcal > 700 || summealcal < 600);
+
+                                    for (int a = 0; a < 4; a++) {
+                                        System.out.print(diet[a] + "\n");
+                                    }
+                                    System.out.println("Sum Meal Calories: " + summealcal);
+                                    System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
+                                }
+                                User_Info.cheatday_counter += 1;
+                            }
+                        } else
+                            //We added a cheat day counter for users
+                            System.out.println("Congrats!You've been determined through 31 days and we owe you a CHEAT DAY!You can eat whatever you want today.\n");
+
+                        if (hour >= 20 && User_Info.bmi >= 25) {
+                            System.out.println("Don't eat something for 4 hours before bed!");
                         }
+
+                        //We store the diet list for user to make them able to see whenever they want
+                        String final_string = Arrays.toString(diet);
+                        PreparedStatement insertbf;
+                        insertbf = db.connect().prepareStatement("update users set diet_list = ? where username = ?");
+                        insertbf.setString(1, User_Info.diet_list = final_string);
+                        insertbf.setString(2, User_Info.username);
+                        insertbf.executeUpdate();
+                    } else {
+                        //If a diet list already exist system just shows his list not creating a new list
+                        System.out.println(User_Info.diet_list);
+                    }
                     System.out.println("Wanna Go Home => Yes");
 
                     if (sc1.nextLine().equalsIgnoreCase("yes")) {
