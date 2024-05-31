@@ -105,7 +105,7 @@ public class Home {
                                         "⢿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
                                         "⠀⠙⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"+"\nWOW you are so healthy with BMI value of EXACTLY 20! How is this even possible?\n");
                             } else if (User_Info.bmi < 25) {
-                                System.out.print("You are healthy with BMI value of"+User_Info.bmi+". Keep being healthy!\n");
+                                System.out.print("You are healthy with BMI value of "+User_Info.bmi+".\n Keep being healthy!\n");
                             }
                         }
                     }
@@ -266,7 +266,7 @@ public class Home {
 
                             }
 
-                            else if (hour >= 11) { //this part is for lunch
+                            else if (hour >= 11) { //this part is for lunch and dinner
                                 int random_b;
                                 int summealcal;
 
@@ -289,7 +289,7 @@ public class Home {
                                         diet[2] = lowcalside[random_b];
                                         summealcal += lowcalside_cal[random_b];
 
-                                        random_b = random.nextInt(4, 8);
+                                        random_b = random.nextInt(4, 7);
                                         diet[3] = bev[random_b];
                                         summealcal += bev_cal[random_b];
 
@@ -318,7 +318,7 @@ public class Home {
                                         diet[2] = lowcalside[random_b];
                                         summealcal += lowcalside_cal[random_b];
 
-                                        random_b = random.nextInt(4, 8);
+                                        random_b = random.nextInt(4, 7);
                                         diet[3] = bev[random_b];
                                         summealcal += bev_cal[random_b];
 
@@ -330,7 +330,7 @@ public class Home {
                                     System.out.println("Sum Meal Calories: " + summealcal);
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                                 }
-                                else if (User_Info.bmi <= 18.5 && User_Info.gender.equals("female") && User_Info.bmi < 25) {
+                                else if (User_Info.bmi >= 18.5 && User_Info.gender.equals("female") && User_Info.bmi < 25) {
                                     do {
                                         summealcal = 0;
 
@@ -346,7 +346,7 @@ public class Home {
                                         diet[2] = lowcalside[random_b];
                                         summealcal += lowcalside_cal[random_b];
 
-                                        random_b = random.nextInt(4, 8);
+                                        random_b = random.nextInt(4, 7);
                                         diet[3] = bev[random_b];
                                         summealcal += bev_cal[random_b];
 
@@ -358,7 +358,7 @@ public class Home {
                                     System.out.println("Sum Meal Calories: " + summealcal);
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                                 }
-                                else if (User_Info.bmi <= 18.5 && User_Info.gender.equals("male") && User_Info.bmi < 25) {
+                                else if (User_Info.bmi >= 18.5 && User_Info.gender.equals("male") && User_Info.bmi < 25) {
                                     do {
                                         summealcal = 0;
 
@@ -374,7 +374,7 @@ public class Home {
                                         diet[2] = lowcalside[random_b];
                                         summealcal += lowcalside_cal[random_b];
 
-                                        random_b = random.nextInt(4, 8);
+                                        random_b = random.nextInt(4, 7);
                                         diet[3] = bev[random_b];
                                         summealcal += bev_cal[random_b];
 
@@ -387,7 +387,7 @@ public class Home {
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                                 }
 
-                                else if (User_Info.bmi >= 18.5 && User_Info.gender.equals("female")) {
+                                else if (User_Info.bmi >= 25 && User_Info.gender.equals("female")) {
                                     do {
                                         summealcal = 0;
 
@@ -416,7 +416,7 @@ public class Home {
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                                 }
 
-                                else if (User_Info.bmi >= 18.5 && User_Info.gender.equals("male")) {
+                                else if (User_Info.bmi >= 25 && User_Info.gender.equals("male")) {
                                     do {
                                         summealcal = 0;
 
@@ -432,7 +432,7 @@ public class Home {
                                         diet[2] = lowcalside[random_b];
                                         summealcal += lowcalside_cal[random_b];
 
-                                        random_b = random.nextInt(4, 8);
+                                        random_b = random.nextInt(4, 7);
                                         diet[3] = bev[random_b];
                                         summealcal += bev_cal[random_b];
 
@@ -443,6 +443,11 @@ public class Home {
                                     }
                                     System.out.println("Sum Meal Calories: " + summealcal);
                                     System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
+                                    System.out.println("Type anything to go home.");
+
+                                    if (sc1.hasNext()) {
+                                        break;
+                                    }
                                 }
                                 PreparedStatement insertcd;
                                 insertcd = db.connect().prepareStatement("update users set cheat_day_timer = ? where username = ?");
