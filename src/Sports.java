@@ -28,7 +28,7 @@ public class Sports {
                     System.out.println("Select an activity to see estimated calories burned per hour: ");
 
                     for (int i = 0; i < sports.length; i++) {
-                        System.out.print((i) + ". " + sports[i]+"\n");
+                        System.out.print("-"+sports[i]+"\n");
                     }
                     System.out.println("Exit");
 
