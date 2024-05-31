@@ -80,7 +80,7 @@ public class Login_Register {
 
         //For register we take each of these information from user. Then create a profile for him at sql database
         try{PreparedStatement register = db.connect().prepareStatement("INSERT INTO users" +
-                "(username, password, gender, heigth, weight, goal_w, bmi, pregnancy,cheat_day_timer)values" +
+                "(username, password, gender, heigth, weight, goal_w, bmi, pregnancy, cheat_day_timer, day_counter)values" +
                 "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             {
                 System.out.print("Enter username:");
@@ -122,7 +122,7 @@ public class Login_Register {
                 register.setFloat(4, User_Info.height=Main.sc.nextFloat());
                 System.out.print("Enter weight(kg):");
                 register.setFloat(5, User_Info.weight=Main.sc.nextFloat());
-                System.out.printf("Our advice on your ideal weight is %d kg.\n", (User_Info.height-110));
+                System.out.printf("Our advice on your ideal weight is %.2f kg.\n", (User_Info.height-110));
                 User_Info.bmi = (User_Info.weight / (((User_Info.height / 100)*(User_Info.height / 100))));
                 int wg;
                 do{
@@ -140,8 +140,8 @@ public class Login_Register {
                 User_Info.cheatday_counter=0;
                 register.setInt(9,User_Info.cheatday_counter);
                 System.out.println(register);
-                register.executeUpdate();
                 register.setInt(10, calendar.get(Calendar.DAY_OF_YEAR));
+
                 register.executeUpdate();
             }
         }
