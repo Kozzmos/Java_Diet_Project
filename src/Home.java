@@ -442,9 +442,13 @@ public class Home {
                                 }
                                 User_Info.cheatday_counter += 1;
                             }
-                        } else
+                        } else {
                             //We added a cheat day counter for users
                             System.out.println("Congrats!You've been determined through 31 days and we owe you a CHEAT DAY!You can eat whatever you want today.\n");
+                            PreparedStatement cheat_day = db.connect().prepareStatement("update users set cheat_day_timer = 0 where username = ?");
+                            cheat_day.setString(1, User_Info.username);
+                            cheat_day.executeUpdate();
+                        }
 
                         if (hour >= 20 && User_Info.bmi >= 18.5) {
                             System.out.println("Don't eat something for 4 hours before bed!");
