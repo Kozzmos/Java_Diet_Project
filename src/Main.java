@@ -39,4 +39,4 @@ public class Main {
 // DEVELOPPERS:
 // Akif Eren Ertuğrul
 // Osman Enes Doğaner
-// Dora Albayrak
+// Dora Bayraktar

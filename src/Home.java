@@ -34,7 +34,8 @@ public class Home {
         String[] bev = {"Americano (1 cup)", "Black coffee (1 cup)", "Espresso (1 cup)", "Turkish coffee (1 cup)","Diet Coke","Diet Sprite","Juice"};
         int[] bev_cal = {9, 5, 1, 46, 1, 2, 54};
         //these strings store foods and their call
-        String[] final_diet = new String[4];
+
+        String[] diet = new String[4];
 
         while(true) {
             int hour = calendar.get(Calendar.HOUR_OF_DAY);
@@ -129,32 +130,31 @@ public class Home {
                                 if (hour < 11) { //this part is for breakfast
                                     int random_b;
                                     int sumbreakfastcal;
-                                    String[] breakfastdiet = new String[4];
                                     Random random = new Random();
 
                                     if (User_Info.bmi < 18.5 && User_Info.gender.equals("female")) {
                                         do {
                                             sumbreakfastcal = 0;
                                             random_b = random.nextInt(0, 6);
-                                            breakfastdiet[0] = breakfast[random_b];
+                                            diet[0] = breakfast[random_b];
                                             sumbreakfastcal += breakfast_calories[random_b];
 
                                             random_b = random.nextInt(6, 14);
-                                            breakfastdiet[1] = breakfast[random_b];
+                                            diet[1] = breakfast[random_b];
                                             sumbreakfastcal += breakfast_calories[random_b];
 
                                             random_b = random.nextInt(0, 2);
-                                            breakfastdiet[2] = lowcalside[random_b];
+                                            diet[2] = lowcalside[random_b];
                                             sumbreakfastcal += lowcalside_cal[random_b];
 
                                             random_b = random.nextInt(0, 4);
-                                            breakfastdiet[3] = bev[random_b];
+                                            diet[3] = bev[random_b];
                                             sumbreakfastcal += bev_cal[random_b];
 
                                         } while (sumbreakfastcal > 600 || sumbreakfastcal < 500);
 
                                         for (int a = 0; a < 4; a++) {
-                                            System.out.print(breakfastdiet[a] + "\n");
+                                            System.out.print(diet[a] + "\n");
                                         }
 
                                         System.out.println("Sum Breakfast Calories: " + sumbreakfastcal);
@@ -166,23 +166,23 @@ public class Home {
                                         do {
                                             sumbreakfastcal = 0;
                                             random_b = random.nextInt(0, 6);
-                                            breakfastdiet[0] = breakfast[random_b];
+                                            diet[0] = breakfast[random_b];
                                             sumbreakfastcal += breakfast_calories[random_b];
 
                                             random_b = random.nextInt(6, 14);
-                                            breakfastdiet[1] = breakfast[random_b];
+                                            diet[1] = breakfast[random_b];
                                             sumbreakfastcal += breakfast_calories[random_b];
 
                                             random_b = random.nextInt(0, 2);
-                                            breakfastdiet[2] = lowcalside[random_b];
+                                            diet[2] = lowcalside[random_b];
                                             sumbreakfastcal += lowcalside_cal[random_b];
 
                                             random_b = random.nextInt(0, 4);
-                                            breakfastdiet[3] = bev[random_b];
+                                            diet[3] = bev[random_b];
                                             sumbreakfastcal += bev_cal[random_b];
                                         } while (sumbreakfastcal < 600);
                                         for (int a = 0; a < 4; a++) {
-                                            System.out.print(breakfastdiet[a] + "\n");
+                                            System.out.print(diet[a] + "\n");
                                         }
                                         System.out.println("Sum Breakfast Calories: " + sumbreakfastcal);
                                         System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
@@ -192,25 +192,25 @@ public class Home {
                                         do {
                                             sumbreakfastcal = 0;
                                             random_b = random.nextInt(0, 6);
-                                            breakfastdiet[0] = breakfast[random_b];
+                                            diet[0] = breakfast[random_b];
                                             sumbreakfastcal += breakfast_calories[random_b];
 
                                             random_b = random.nextInt(6, 14);
-                                            breakfastdiet[1] = breakfast[random_b];
+                                            diet[1] = breakfast[random_b];
                                             sumbreakfastcal += breakfast_calories[random_b];
 
                                             random_b = random.nextInt(0, 2);
-                                            breakfastdiet[2] = lowcalside[random_b];
+                                            diet[2] = lowcalside[random_b];
                                             sumbreakfastcal += lowcalside_cal[random_b];
 
                                             random_b = random.nextInt(0, 4);
-                                            breakfastdiet[3] = bev[random_b];
+                                            diet[3] = bev[random_b];
                                             sumbreakfastcal += bev_cal[random_b];
 
                                         } while (sumbreakfastcal > 500 || sumbreakfastcal < 400);
 
                                         for (int a = 0; a < 4; a++) {
-                                            System.out.print(breakfastdiet[a] + "\n");
+                                            System.out.print(diet[a] + "\n");
                                         }
                                         System.out.println("Sum Breakfast Calories: " + sumbreakfastcal);
                                         System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
@@ -221,36 +221,36 @@ public class Home {
 
                                             sumbreakfastcal = 0;
                                             random_b = random.nextInt(0, 6);
-                                            breakfastdiet[0] = breakfast[random_b];
+                                            diet[0] = breakfast[random_b];
                                             sumbreakfastcal += breakfast_calories[random_b];
 
                                             random_b = random.nextInt(6, 14);
-                                            breakfastdiet[1] = breakfast[random_b];
+                                            diet[1] = breakfast[random_b];
                                             sumbreakfastcal += breakfast_calories[random_b];
 
                                             random_b = random.nextInt(0, 2);
-                                            breakfastdiet[2] = lowcalside[random_b];
+                                            diet[2] = lowcalside[random_b];
                                             sumbreakfastcal += lowcalside_cal[random_b];
 
                                             random_b = random.nextInt(0, 4);
-                                            breakfastdiet[3] = bev[random_b];
+                                            diet[3] = bev[random_b];
                                             sumbreakfastcal += bev_cal[random_b];
                                         } while (sumbreakfastcal > 600 || sumbreakfastcal < 500);
                                         for (int a = 0; a < 4; a++) {
-                                            System.out.print(breakfastdiet[a] + "\n");
+                                            System.out.print(diet[a] + "\n");
                                         }
                                         System.out.println("Sum Breakfast Calories: " + sumbreakfastcal);
                                         System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
 
                                     }
                                     User_Info.cheatday_counter += 1;
-                                    final_diet = Arrays.copyOf(breakfastdiet, breakfastdiet.length);
+
                                 }
 
                                 if (hour >= 11) { //this part is for lunch
                                     int random_b;
                                     int summealcal;
-                                    String[] mealdiet = new String[5];
+
                                     Random random = new Random();
 
                                     if (User_Info.bmi < 18.5 && User_Info.gender.equals("female")) {
@@ -259,25 +259,25 @@ public class Home {
                                             summealcal = 0;
 
                                             random_b = random.nextInt(0, 19);
-                                            mealdiet[0] = maindishes_protein[random_b];
+                                            diet[0] = maindishes_protein[random_b];
                                             summealcal += maindishes_protein_cal[random_b];
 
                                             random_b = random.nextInt(0, 13);
-                                            mealdiet[1] = carbs[random_b];
+                                            diet[1] = carbs[random_b];
                                             summealcal += carbs_cal[random_b];
 
                                             random_b = random.nextInt(2, 12);
-                                            mealdiet[2] = lowcalside[random_b];
+                                            diet[2] = lowcalside[random_b];
                                             summealcal += lowcalside_cal[random_b];
 
                                             random_b = random.nextInt(4, 8);
-                                            mealdiet[3] = bev[random_b];
+                                            diet[3] = bev[random_b];
                                             summealcal += bev_cal[random_b];
 
                                         } while (summealcal > 800 || summealcal < 700);
 
                                         for (int a = 0; a < 4; a++) {
-                                            System.out.print(mealdiet[a] + "\n");
+                                            System.out.print(diet[a] + "\n");
                                         }
                                         System.out.println("Sum Meal Calories: " + summealcal);
                                         System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
@@ -288,25 +288,25 @@ public class Home {
                                             summealcal = 0;
 
                                             random_b = random.nextInt(0, 19);
-                                            mealdiet[0] = maindishes_protein[random_b];
+                                            diet[0] = maindishes_protein[random_b];
                                             summealcal += maindishes_protein_cal[random_b];
 
                                             random_b = random.nextInt(0, 13);
-                                            mealdiet[1] = carbs[random_b];
+                                            diet[1] = carbs[random_b];
                                             summealcal += carbs_cal[random_b];
 
                                             random_b = random.nextInt(2, 12);
-                                            mealdiet[2] = lowcalside[random_b];
+                                            diet[2] = lowcalside[random_b];
                                             summealcal += lowcalside_cal[random_b];
 
                                             random_b = random.nextInt(4, 8);
-                                            mealdiet[3] = bev[random_b];
+                                            diet[3] = bev[random_b];
                                             summealcal += bev_cal[random_b];
 
                                         } while (summealcal > 900 || summealcal < 800);
 
                                         for (int a = 0; a < 4; a++) {
-                                            System.out.print(mealdiet[a] + "\n");
+                                            System.out.print(diet[a] + "\n");
                                         }
                                         System.out.println("Sum Meal Calories: " + summealcal);
                                         System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
@@ -316,25 +316,25 @@ public class Home {
                                             summealcal = 0;
 
                                             random_b = random.nextInt(0, 19);
-                                            mealdiet[0] = maindishes_protein[random_b];
+                                            diet[0] = maindishes_protein[random_b];
                                             summealcal += maindishes_protein_cal[random_b];
 
                                             random_b = random.nextInt(0, 13);
-                                            mealdiet[1] = carbs[random_b];
+                                            diet[1] = carbs[random_b];
                                             summealcal += carbs_cal[random_b];
 
                                             random_b = random.nextInt(2, 12);
-                                            mealdiet[2] = lowcalside[random_b];
+                                            diet[2] = lowcalside[random_b];
                                             summealcal += lowcalside_cal[random_b];
 
                                             random_b = random.nextInt(4, 8);
-                                            mealdiet[3] = bev[random_b];
+                                            diet[3] = bev[random_b];
                                             summealcal += bev_cal[random_b];
 
                                         } while (summealcal > 700 || summealcal < 600);
 
                                         for (int a = 0; a < 4; a++) {
-                                            System.out.print(mealdiet[a] + "\n");
+                                            System.out.print(diet[a] + "\n");
                                         }
                                         System.out.println("Sum Meal Calories: " + summealcal);
                                         System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
@@ -344,25 +344,25 @@ public class Home {
                                             summealcal = 0;
 
                                             random_b = random.nextInt(0, 19);
-                                            mealdiet[0] = maindishes_protein[random_b];
+                                            diet[0] = maindishes_protein[random_b];
                                             summealcal += maindishes_protein_cal[random_b];
 
                                             random_b = random.nextInt(0, 13);
-                                            mealdiet[1] = carbs[random_b];
+                                            diet[1] = carbs[random_b];
                                             summealcal += carbs_cal[random_b];
 
                                             random_b = random.nextInt(2, 12);
-                                            mealdiet[2] = lowcalside[random_b];
+                                            diet[2] = lowcalside[random_b];
                                             summealcal += lowcalside_cal[random_b];
 
                                             random_b = random.nextInt(4, 8);
-                                            mealdiet[3] = bev[random_b];
+                                            diet[3] = bev[random_b];
                                             summealcal += bev_cal[random_b];
 
                                         } while (summealcal > 850 || summealcal < 750);
 
                                         for (int a = 0; a < 4; a++) {
-                                            System.out.print(mealdiet[a] + "\n");
+                                            System.out.print(diet[a] + "\n");
                                         }
                                         System.out.println("Sum Meal Calories: " + summealcal);
                                         System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
@@ -373,25 +373,25 @@ public class Home {
                                             summealcal = 0;
 
                                             random_b = random.nextInt(0, 19);
-                                            mealdiet[0] = maindishes_protein[random_b];
+                                            diet[0] = maindishes_protein[random_b];
                                             summealcal += maindishes_protein_cal[random_b];
 
                                             random_b = random.nextInt(0, 13);
-                                            mealdiet[1] = carbs[random_b];
+                                            diet[1] = carbs[random_b];
                                             summealcal += carbs_cal[random_b];
 
                                             random_b = random.nextInt(2, 12);
-                                            mealdiet[2] = lowcalside[random_b];
+                                            diet[2] = lowcalside[random_b];
                                             summealcal += lowcalside_cal[random_b];
 
                                             random_b = random.nextInt(4, 7);
-                                            mealdiet[3] = bev[random_b];
+                                            diet[3] = bev[random_b];
                                             summealcal += bev_cal[random_b];
 
                                         } while (summealcal > 600 || summealcal < 500);
 
                                         for (int a = 0; a < 4; a++) {
-                                            System.out.print(mealdiet[a] + "\n");
+                                            System.out.print(diet[a] + "\n");
                                         }
                                         System.out.println("Sum Meal Calories: " + summealcal);
                                         System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
@@ -402,31 +402,30 @@ public class Home {
                                             summealcal = 0;
 
                                             random_b = random.nextInt(0, 19);
-                                            mealdiet[0] = maindishes_protein[random_b];
+                                            diet[0] = maindishes_protein[random_b];
                                             summealcal += maindishes_protein_cal[random_b];
 
                                             random_b = random.nextInt(0, 13);
-                                            mealdiet[1] = carbs[random_b];
+                                            diet[1] = carbs[random_b];
                                             summealcal += carbs_cal[random_b];
 
                                             random_b = random.nextInt(2, 12);
-                                            mealdiet[2] = lowcalside[random_b];
+                                            diet[2] = lowcalside[random_b];
                                             summealcal += lowcalside_cal[random_b];
 
                                             random_b = random.nextInt(4, 8);
-                                            mealdiet[3] = bev[random_b];
+                                            diet[3] = bev[random_b];
                                             summealcal += bev_cal[random_b];
 
                                         } while (summealcal > 700 || summealcal < 600);
 
                                         for (int a = 0; a < 4; a++) {
-                                            System.out.print(mealdiet[a] + "\n");
+                                            System.out.print(diet[a] + "\n");
                                         }
                                         System.out.println("Sum Meal Calories: " + summealcal);
                                         System.out.println("Remember to use olive oil (up to 50ml for a day) while cooking!");
                                     }
                                     User_Info.cheatday_counter += 1;
-                                    final_diet = Arrays.copyOf(mealdiet, mealdiet.length);
                                 }
                             } else
                                 //We added a cheat day counter for users
@@ -437,7 +436,7 @@ public class Home {
                             }
 
                             //We store the diet list for user to make them able to see whenever they want
-                            String final_string = Arrays.toString(final_diet);
+                            String final_string = Arrays.toString(diet);
                             PreparedStatement insertbf;
                             insertbf = db.connect().prepareStatement("update users set diet_list = ? where username = ?");
                             insertbf.setString(1, User_Info.diet_list = final_string);
